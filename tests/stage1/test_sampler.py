@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import collections
+
 import pytest
 
 from stage1.config import Stage1Config
@@ -22,6 +24,7 @@ def _ds_and_sampler(stage1_cfg_dict, epoch: int = 0):
         seed=cfg.seed,
         fold=cfg.fold,
         epoch=epoch,
+        subject_by_row=ds.row_subject_ids(),
     )
     return ds, sampler
 
@@ -73,4 +76,115 @@ def test_replacement_is_refused(stage1_cfg_dict):
             hc_per_stimulus=2,
             min_hc_per_stimulus=2,
             replacement=True,
+        )
+
+
+def _synthetic_rotation_data(n_stimuli: int, n_subjects: int, rows_per_subject: int = 1):
+    """stimulus -> rows; each subject contributes rows_per_subject rows."""
+    groups: dict[int, list[int]] = {}
+    subject_by_row: dict[int, str] = {}
+    idx = 0
+    for si in range(n_stimuli):
+        rows = []
+        for subj in range(n_subjects):
+            for _ in range(rows_per_subject):
+                rows.append(idx)
+                subject_by_row[idx] = f"subj_{subj}"
+                idx += 1
+        groups[si] = rows
+    return groups, subject_by_row
+
+
+def test_rotation_covers_every_trial_uniformly():
+    # 3 stimuli x 8 subjects x 1 row; H=2, 8 epochs -> each row exactly
+    # floor/ceil(8*2/8) = 2 times, and at most once per epoch.
+    groups, subject_by_row = _synthetic_rotation_data(n_stimuli=3, n_subjects=8)
+    counts: collections.Counter = collections.Counter()
+    for epoch in range(8):
+        sampler = StimulusGroupedHCBatchSampler(
+            groups,
+            stimuli_per_batch=3,
+            hc_per_stimulus=2,
+            min_hc_per_stimulus=2,
+            seed=2026,
+            fold=0,
+            epoch=epoch,
+            subject_by_row=subject_by_row,
+        )
+        seen: set[int] = set()
+        for batch in sampler:
+            assert not seen & set(batch)  # no trial twice within one epoch
+            seen |= set(batch)
+        counts.update(seen)
+    assert set(counts.values()) == {2}
+
+
+def test_remainder_batch_keeps_all_stimuli_each_epoch():
+    # 5 stimuli x 8 subjects; S=2 -> 3 batches (2 full + 1 remainder of 1
+    # stimulus); every stimulus participates in every epoch.
+    groups, subject_by_row = _synthetic_rotation_data(n_stimuli=5, n_subjects=8)
+    row_to_stimulus = {r: si for si, rows in groups.items() for r in rows}
+    sampler = StimulusGroupedHCBatchSampler(
+        groups,
+        stimuli_per_batch=2,
+        hc_per_stimulus=2,
+        min_hc_per_stimulus=2,
+        seed=2026,
+        fold=0,
+        epoch=0,
+        subject_by_row=subject_by_row,
+    )
+    assert len(sampler) == 3  # ceil(5 / 2)
+    batches = list(sampler)
+    assert [len(b) for b in batches] == [4, 4, 2]
+    for epoch in range(4):
+        sampler.set_epoch(epoch)
+        stimuli_seen: set[int] = set()
+        for batch in sampler:
+            stimuli_seen |= {row_to_stimulus[r] for r in batch}
+        assert stimuli_seen == set(groups)  # all 5 stimuli every epoch
+
+
+def test_rotation_never_duplicates_subject_within_batch():
+    # One stimulus; subject A holds 2 rows, B/C/D hold 1 each. A window of 3
+    # slots must pick 3 distinct subjects even though A has multiple rows.
+    groups = {0: [0, 1, 2, 3, 4]}
+    subject_by_row = {0: "A", 1: "A", 2: "B", 3: "C", 4: "D"}
+    sampler = StimulusGroupedHCBatchSampler(
+        groups,
+        stimuli_per_batch=1,
+        hc_per_stimulus=3,
+        min_hc_per_stimulus=3,
+        seed=2026,
+        fold=0,
+        epoch=0,
+        subject_by_row=subject_by_row,
+    )
+    batch = next(iter(sampler))
+    subjects = {subject_by_row[r] for r in batch}
+    assert len(batch) == 3
+    assert len(subjects) == 3  # distinct subjects within the batch
+
+    # Over 8 epochs every row (including both rows of subject A) is trained:
+    # 8*3/4 = 6 window visits per slot; A's two rows split them -> >= 2 each.
+    counts: collections.Counter = collections.Counter()
+    for epoch in range(8):
+        sampler.set_epoch(epoch)
+        for batch in sampler:
+            counts.update(batch)
+    assert min(counts[r] for r in groups[0]) >= 2
+
+
+def test_subject_by_row_length_is_validated():
+    groups, _ = _synthetic_rotation_data(n_stimuli=1, n_subjects=2)
+    with pytest.raises(ValueError, match="subject_by_row"):
+        StimulusGroupedHCBatchSampler(
+            groups,
+            stimuli_per_batch=1,
+            hc_per_stimulus=2,
+            min_hc_per_stimulus=2,
+            seed=2026,
+            fold=0,
+            epoch=0,
+            subject_by_row=["only_one_subject"],
         )

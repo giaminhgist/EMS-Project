@@ -162,6 +162,10 @@ class Stage1Dataset(Dataset):
         """stimulus_index -> dataset row indices (actual training trials)."""
         return dict(self._row_indices_by_stimulus)
 
+    def row_subject_ids(self) -> list[str]:
+        """Subject id per dataset row position, aligned with stimulus_groups()."""
+        return [str(x) for x in self.trial_rows.subject_id]
+
     def trial_uids(self) -> list[str]:
         return list(self.trial_rows.trial_uid)
 

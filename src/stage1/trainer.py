@@ -91,6 +91,7 @@ def _build_datasets(
         seed=cfg.seed,
         fold=cfg.fold,
         epoch=0,
+        subject_by_row=train_ds.row_subject_ids(),
     )
     return train_ds, val_ds, sampler
 

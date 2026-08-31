@@ -113,8 +113,15 @@ Algorithm:
 1. build `stimulus_index -> dataset row indices` from actual training trials;
 2. retain stimuli with at least the configured `min_hc_per_stimulus`;
 3. seed a local generator from global seed, fold, and epoch;
-4. sample `S` stimuli;
-5. for each stimulus sample `H` distinct subjects without replacement;
+4. shuffle the eligible stimuli and partition them into batches of `S`; when
+   the stimulus count is not a multiple of `S`, a final remainder batch keeps
+   the leftover stimuli so every eligible stimulus participates every epoch;
+5. for each stimulus pick `H` distinct subjects via a fixed seeded rotation:
+   subjects are held in a seeded order (fixed across epochs) and a window of
+   `H` slides by `epoch * H` with wraparound; within a subject, rows rotate
+   across epochs. This guarantees every trial of every subject is trained
+   uniformly (floor/ceil of `epochs * H / n_subjects` times) instead of random
+   sampling, which can starve individual trials;
 6. concatenate the groups and optionally apply a deterministic within-batch
    permutation while retaining stimulus metadata;
 7. implement `set_epoch(epoch)` for reproducible changes across epochs;
