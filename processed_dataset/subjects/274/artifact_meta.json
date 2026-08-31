@@ -1,0 +1,9 @@
+{
+  "config_hash": "554ed2cb8817ddd1286e89b6b935059e80b2d2b3456e793b11756e5b49826660",
+  "heatmaps_sha256": "ae52cf0757b8e8f3d656dd62dae17f332a8877ce6d6fb79d43a50c3eafb58097",
+  "n_trials_ok": 100,
+  "n_trials_total": 100,
+  "source_workbook_sha256": "857d3d565677846b5619fcbd033bf12e979ba370b5ff6eeabad40cb7272f6e37",
+  "stimulus_indices_sha256": "790eff774b85e10976ffdaadaba0fd9e484f45b6874e4c61f5aff8fc1bd374a5",
+  "subject_id": "274"
+}

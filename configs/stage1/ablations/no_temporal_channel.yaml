@@ -1,0 +1,7 @@
+# Ablation: no_temporal_channel — remove channel 2.
+_comment: "Contribution of temporal progression"
+model:
+  input_channels: 2
+  active_channels: [0, 1]
+loss:
+  channel_weights: [1.0, 1.0]

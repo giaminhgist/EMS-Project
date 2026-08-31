@@ -1,0 +1,4 @@
+# Ablation: token_mlp_bridge — token-wise MLP bridge of matched width.
+_comment: "Does explicit spatial mixing add value?"
+model:
+  spatial_bridge: token_mlp_ffn

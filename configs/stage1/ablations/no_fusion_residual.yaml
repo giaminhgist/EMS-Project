@@ -1,0 +1,4 @@
+# Ablation: no_fusion_residual — remove residual paths around both attentions.
+_comment: "Do residual paths preserve gaze information and stabilize training?"
+model:
+  fusion_residual: false

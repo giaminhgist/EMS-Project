@@ -1,0 +1,46 @@
+{
+  "config_hash": "554ed2cb8817ddd1286e89b6b935059e80b2d2b3456e793b11756e5b49826660",
+  "excluded_trials": [
+    {
+      "stimulus_id": "outman_056.jpg",
+      "subject_id": "020"
+    },
+    {
+      "stimulus_id": "outman_057.jpg",
+      "subject_id": "028"
+    },
+    {
+      "stimulus_id": "noi_047.jpg",
+      "subject_id": "208"
+    },
+    {
+      "stimulus_id": "rand_076.jpg",
+      "subject_id": "208"
+    },
+    {
+      "stimulus_id": "ind_017.jpg",
+      "subject_id": "270"
+    }
+  ],
+  "n_below_duration_threshold_rows": 0,
+  "n_fixation_rows": 225159,
+  "n_malformed_duration": 0,
+  "n_malformed_fix_index": 0,
+  "n_malformed_pupil": 0,
+  "n_nonfinite_rows": 0,
+  "n_nonpositive_duration_rows": 1,
+  "n_off_canvas_rows": 4058,
+  "n_subjects": 160,
+  "n_subjects_hc": 80,
+  "n_subjects_sz": 80,
+  "n_temporal_undefined": 0,
+  "n_trials_fix_index_duplicates": 0,
+  "n_trials_fix_index_gaps": 0,
+  "n_trials_fix_index_non_monotonic": 0,
+  "n_trials_observed": 15912,
+  "n_trials_zero_spatial": 5,
+  "notes": [
+    "off_canvas_policy=drop: off-canvas fixations are excluded from spatial maps but retained in QC counts",
+    "zero_spatial_policy=exclude_no_spatial_fixations: trials with no usable spatial fixation are recorded in the trial manifest with qc_status 'excluded_no_spatial_fixations' and have no heatmap row"
+  ]
+}

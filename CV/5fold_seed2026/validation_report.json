@@ -1,0 +1,73 @@
+{
+  "all_checks_pass": true,
+  "every_subject_assigned": true,
+  "failures": [],
+  "folds": [
+    {
+      "fold": 0,
+      "train_trials": 12750,
+      "train_val_subject_intersection_empty": true,
+      "trials_belong_to_partition_subjects": true,
+      "val_trials": 3162
+    },
+    {
+      "fold": 1,
+      "train_trials": 12753,
+      "train_val_subject_intersection_empty": true,
+      "trials_belong_to_partition_subjects": true,
+      "val_trials": 3159
+    },
+    {
+      "fold": 2,
+      "train_trials": 12715,
+      "train_val_subject_intersection_empty": true,
+      "trials_belong_to_partition_subjects": true,
+      "val_trials": 3197
+    },
+    {
+      "fold": 3,
+      "train_trials": 12713,
+      "train_val_subject_intersection_empty": true,
+      "trials_belong_to_partition_subjects": true,
+      "val_trials": 3199
+    },
+    {
+      "fold": 4,
+      "train_trials": 12717,
+      "train_val_subject_intersection_empty": true,
+      "trials_belong_to_partition_subjects": true,
+      "val_trials": 3195
+    }
+  ],
+  "leading_zero_ids_preserved": true,
+  "stratification": [
+    {
+      "fold": 0,
+      "val_hc": 16,
+      "val_sz": 16
+    },
+    {
+      "fold": 1,
+      "val_hc": 16,
+      "val_sz": 16
+    },
+    {
+      "fold": 2,
+      "val_hc": 16,
+      "val_sz": 16
+    },
+    {
+      "fold": 3,
+      "val_hc": 16,
+      "val_sz": 16
+    },
+    {
+      "fold": 4,
+      "val_hc": 16,
+      "val_sz": 16
+    }
+  ],
+  "subject_occurs_exactly_once": true,
+  "validation_sets_disjoint": true,
+  "validation_union_equals_population": true
+}

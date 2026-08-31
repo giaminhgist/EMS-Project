@@ -1,0 +1,4 @@
+# Ablation: single_cross_attention — remove Attention 2; keep Attention 1 + bridge.
+_comment: "Does semantic re-attention add value after spatial contextualization?"
+model:
+  single_cross_attention: true

@@ -1,0 +1,42 @@
+[project]
+name = "ems-project"
+version = "0.1.0"
+description = "EMS eye-tracking research pipeline: preprocessing, DINO features, CV, Stage-1"
+readme = "README.md"
+authors = [
+    { name = "Gia Minh Hoang", email = "hoang.giaminh0596@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "pyarrow>=16",
+    "openpyxl>=3.1",
+    "pillow>=10",
+    "pyyaml>=6",
+    "matplotlib>=3.8",
+    "scipy>=1.12",
+    "scikit-learn>=1.4",
+    "torch>=2.3",
+    "torchvision>=0.18",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[project.scripts]
+ems-project = "ems_project:main"
+
+[build-system]
+requires = ["uv_build>=0.12.7,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
+markers = [
+    "smoke: real-EMS-data tests (small subset, scratch outputs only)",
+]

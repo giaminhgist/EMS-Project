@@ -1,0 +1,4 @@
+# Ablation: no_spatial_bridge — replace the spatial bridge with identity.
+_comment: "Is the NN bridge necessary between the two attentions?"
+model:
+  spatial_bridge: identity

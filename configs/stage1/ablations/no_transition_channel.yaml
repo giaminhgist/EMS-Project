@@ -1,0 +1,7 @@
+# Ablation: no_transition_channel — remove channel 1.
+_comment: "Contribution of consecutive transitions"
+model:
+  input_channels: 2
+  active_channels: [0, 2]
+loss:
+  channel_weights: [1.0, 1.0]

@@ -1,0 +1,4 @@
+# Ablation: no_norm_loss — lambda_norm = 0.
+_comment: "Does HC normative consistency improve the representation?"
+loss:
+  lambda_norm: 0.0

@@ -1,0 +1,4 @@
+# Ablation: mean_pooling — mean pooling instead of attention pooling.
+_comment: "Are specific spatial tokens more informative?"
+model:
+  pooling: mean

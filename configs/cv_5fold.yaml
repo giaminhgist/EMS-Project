@@ -1,0 +1,13 @@
+# Five-fold subject-level cross-validation configuration (Phase 4)
+
+n_splits: 5
+shuffle: true
+random_state: 2026
+stratify_column: label
+group_column: subject_id
+
+subject_manifest: /root/EMS-Project/processed_dataset/subject_manifest.csv
+trial_manifest: /root/EMS-Project/processed_dataset/trial_manifest.parquet
+source_inventory: /root/EMS-Project/processed_dataset/source_inventory.json
+
+output_root: /root/EMS-Project/CV

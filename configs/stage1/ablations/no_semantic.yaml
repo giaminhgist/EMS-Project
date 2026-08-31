@@ -1,0 +1,4 @@
+# Ablation: no_semantic — bypass DINO and both cross-attentions; keep the bridge.
+_comment: "Does stimulus semantics help?"
+model:
+  semantic_source: none

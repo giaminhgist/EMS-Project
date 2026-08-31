@@ -1,0 +1,101 @@
+{
+  "config_hash": "0bdc488a8d0e0da32d85c06d61ad7b214ce36cea8a1a77bc6155421903f42196",
+  "created_at_utc": "2026-08-31T08:15:36.284598+00:00",
+  "fold_assignments_sha256": "bd3dd244915fa3ce33dcf037d755cc0fff6fea5499c3dc54fc7c9b1779b05f37",
+  "folds": [
+    {
+      "fold": 0,
+      "n_train_subjects": 128,
+      "n_train_trials": 12750,
+      "n_val_subjects": 32,
+      "n_val_trials": 3162,
+      "stage1_train_hc_subjects": 64,
+      "stage1_train_hc_trials": 6389,
+      "stage1_val_hc_subjects": 16,
+      "stage1_val_hc_trials": 1599,
+      "train_hc": 64,
+      "train_sz": 64,
+      "val_hc": 16,
+      "val_sz": 16
+    },
+    {
+      "fold": 1,
+      "n_train_subjects": 128,
+      "n_train_trials": 12753,
+      "n_val_subjects": 32,
+      "n_val_trials": 3159,
+      "stage1_train_hc_subjects": 64,
+      "stage1_train_hc_trials": 6392,
+      "stage1_val_hc_subjects": 16,
+      "stage1_val_hc_trials": 1596,
+      "train_hc": 64,
+      "train_sz": 64,
+      "val_hc": 16,
+      "val_sz": 16
+    },
+    {
+      "fold": 2,
+      "n_train_subjects": 128,
+      "n_train_trials": 12715,
+      "n_val_subjects": 32,
+      "n_val_trials": 3197,
+      "stage1_train_hc_subjects": 64,
+      "stage1_train_hc_trials": 6390,
+      "stage1_val_hc_subjects": 16,
+      "stage1_val_hc_trials": 1598,
+      "train_hc": 64,
+      "train_sz": 64,
+      "val_hc": 16,
+      "val_sz": 16
+    },
+    {
+      "fold": 3,
+      "n_train_subjects": 128,
+      "n_train_trials": 12713,
+      "n_val_subjects": 32,
+      "n_val_trials": 3199,
+      "stage1_train_hc_subjects": 64,
+      "stage1_train_hc_trials": 6388,
+      "stage1_val_hc_subjects": 16,
+      "stage1_val_hc_trials": 1600,
+      "train_hc": 64,
+      "train_sz": 64,
+      "val_hc": 16,
+      "val_sz": 16
+    },
+    {
+      "fold": 4,
+      "n_train_subjects": 128,
+      "n_train_trials": 12717,
+      "n_val_subjects": 32,
+      "n_val_trials": 3195,
+      "stage1_train_hc_subjects": 64,
+      "stage1_train_hc_trials": 6393,
+      "stage1_val_hc_subjects": 16,
+      "stage1_val_hc_trials": 1595,
+      "train_hc": 64,
+      "train_sz": 64,
+      "val_hc": 16,
+      "val_sz": 16
+    }
+  ],
+  "git_commit": "f9da6f9b76563c6bc9236c915697d8b669ff91cb",
+  "input_checksums": {
+    "source_inventory_sha256": "66544ccec23caffbe62e943f3b8188d1a45ff8153f5124fff81d5f0217cbae20",
+    "subject_manifest_sha256": "6470b5ddc83eb571cdd3d565c4d5ad87785a4b6b1ce796e170adca5d2b2fe078",
+    "trial_manifest_sha256": "c717ad338296dc855c5791c0a75cf050747ee0b48d9a09a43d32404e89a31c6b"
+  },
+  "library_versions": {
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "python": "3.12.3",
+    "sklearn": "1.9.0"
+  },
+  "population": {
+    "n_hc": 80,
+    "n_subjects": 160,
+    "n_sz": 80,
+    "n_trials": 15912
+  },
+  "seed": 2026
+}

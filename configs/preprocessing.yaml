@@ -1,0 +1,43 @@
+# EMS preprocessing configuration (Phase 1)
+# Paths are repository-root-relative; the CLI resolves them to absolute paths.
+
+raw_root: /root/EMS-Project/original_dataset
+fixation_root: /root/EMS-Project/original_dataset/EMS/All_Data/Fixations
+image_root: /root/EMS-Project/original_dataset/EMS/Images
+output_root: /root/EMS-Project/processed_dataset
+
+subject_glob: "*.xlsx"
+subject_filename_regex: "^[0-9]+[.]xlsx$"
+sheet_name: Free_viewing
+
+columns:
+  image: IMAGE
+  fix_index: FIX_INDEX
+  fix_duration: FIX_DURATION
+  fix_x: FIX_X
+  fix_y: FIX_Y
+  fix_pupil: FIX_PUPIL
+
+# Diagnostic labels: dataset README rule (numeric filename < split is HC).
+label_rule: numeric_id_below_split_is_hc
+hc_sz_split: 200
+
+source_width: 1024
+source_height: 768
+heatmap_height: 48
+heatmap_width: 64
+
+gaussian_sigma_cells: 2.0
+gaussian_truncate_sigma: 4.0
+transition_sample_step_cells: 0.5
+temporal_epsilon: 1.0e-8
+
+off_canvas_policy: drop
+zero_spatial_policy: exclude_no_spatial
+min_fix_duration_ms: 0
+drop_nonpositive_duration: true
+
+dtype: float32
+num_workers: 2
+seed: 2026
+write_trial_manifest_csv: true

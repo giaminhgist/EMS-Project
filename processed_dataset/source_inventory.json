@@ -1,0 +1,2463 @@
+{
+  "anomaly_measurements": {
+    "n_below_duration_threshold_rows": 0,
+    "n_fixation_rows": 225159,
+    "n_malformed_duration": 0,
+    "n_malformed_fix_index": 0,
+    "n_malformed_pupil": 0,
+    "n_nonfinite_rows": 0,
+    "n_nonpositive_duration_rows": 1,
+    "n_off_canvas_rows": 4058,
+    "n_temporal_undefined": 0,
+    "n_trials_fix_index_duplicates": 0,
+    "n_trials_fix_index_gaps": 0,
+    "n_trials_fix_index_non_monotonic": 0,
+    "n_trials_observed": 15912,
+    "n_trials_zero_spatial": 5
+  },
+  "images": [
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/low_031.jpg",
+      "sha256": "3f62dddb63bb5631e7ae6d65b5ecbbb978cee74f3ee909e2ef4511d764a4996d",
+      "source_image_name": "low_031.jpg",
+      "stimulus_id": "low_031.jpg",
+      "stimulus_index": 0,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/low_032.jpg",
+      "sha256": "85c0e6945908b6e75eed25e044c53846c69724c93b026efbf43f89de15ffc4e8",
+      "source_image_name": "low_032.jpg",
+      "stimulus_id": "low_032.jpg",
+      "stimulus_index": 1,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/low_033.jpg",
+      "sha256": "2398c96cf07cd0e3c3b385ab3f2d2074fe73d56b698651a9a61bad4400166a11",
+      "source_image_name": "low_033.jpg",
+      "stimulus_id": "low_033.jpg",
+      "stimulus_index": 2,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/low_034.jpg",
+      "sha256": "6a30435fd64d72d5aa6ad942f507664311b3670fcede588b3f525117519e2c71",
+      "source_image_name": "low_034.jpg",
+      "stimulus_id": "low_034.jpg",
+      "stimulus_index": 3,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/low_035.jpg",
+      "sha256": "9275ad912eaf98faf627b3c503e9fab724913b340617b818edb4ec9d77f2c685",
+      "source_image_name": "low_035.jpg",
+      "stimulus_id": "low_035.jpg",
+      "stimulus_index": 4,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/low_036.jpg",
+      "sha256": "fe9108fc84a4e8386d978c849b25071e091b3d8044ea1db1c1dbb897687cc7f1",
+      "source_image_name": "low_036.jpg",
+      "stimulus_id": "low_036.jpg",
+      "stimulus_index": 5,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/mood_37.jpg",
+      "sha256": "a6472ea2243150837d53459eef64f7a68c399f4c00a4e5178135452f3f801e3a",
+      "source_image_name": "mood_37.jpg",
+      "stimulus_id": "mood_37.jpg",
+      "stimulus_index": 6,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/mood_38.jpg",
+      "sha256": "896622358dc12ab4bce717b290324426b777569f718f3a6ff88b609dddf9a7ce",
+      "source_image_name": "mood_38.jpg",
+      "stimulus_id": "mood_38.jpg",
+      "stimulus_index": 7,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/mood_39.jpg",
+      "sha256": "4246de52e6e0225e4ef368bf3cac5ea8276757bb27fbb47735d9a9949e667aa5",
+      "source_image_name": "mood_39.jpg",
+      "stimulus_id": "mood_39.jpg",
+      "stimulus_index": 8,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/mood_40.jpg",
+      "sha256": "fd79259fbca1bc64ab9dcdea6f62b92a27b1819abdeef36df8bd9330ccc2bbb6",
+      "source_image_name": "mood_40.jpg",
+      "stimulus_id": "mood_40.jpg",
+      "stimulus_index": 9,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/mood_41.jpg",
+      "sha256": "69b1ab15f9c6fd9101c33618174711930fe157bd55869d6142b778b589d849d0",
+      "source_image_name": "mood_41.jpg",
+      "stimulus_id": "mood_41.jpg",
+      "stimulus_index": 10,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/mood_42.jpg",
+      "sha256": "8dbff99ab74eb20a6c43d7e80ae84c8edc402cafc02ed9761cc1289a84c4f17b",
+      "source_image_name": "mood_42.jpg",
+      "stimulus_id": "mood_42.jpg",
+      "stimulus_index": 11,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/mood_43.jpg",
+      "sha256": "8463c3477f0d25fb7278b7a510b026d93c6a5c61dac2ff1142a4f5930a99ef5b",
+      "source_image_name": "mood_43.jpg",
+      "stimulus_id": "mood_43.jpg",
+      "stimulus_index": 12,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/mood_44.jpg",
+      "sha256": "4385f5d0d5fa33e527ad2b244dfb9ad18a9ae428e048961ab9a9d4104e15aa0f",
+      "source_image_name": "mood_44.jpg",
+      "stimulus_id": "mood_44.jpg",
+      "stimulus_index": 13,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/mood_45.jpg",
+      "sha256": "1e935e66aeef084cda7042f45a9a72e42587e4597f3efa3911ca2e1a53ac5038",
+      "source_image_name": "mood_45.jpg",
+      "stimulus_id": "mood_45.jpg",
+      "stimulus_index": 14,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/mood_46.jpg",
+      "sha256": "ed3e17fa3298c76b6a60ef5a4f97f484f2d18ab86f0dd23300912b490c6aa85a",
+      "source_image_name": "mood_46.jpg",
+      "stimulus_id": "mood_46.jpg",
+      "stimulus_index": 15,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/noi_047.jpg",
+      "sha256": "28af90d35a989a82936a4e54579dfa906eaa78806666617ff02af47458a330c3",
+      "source_image_name": "noi_047.jpg",
+      "stimulus_id": "noi_047.jpg",
+      "stimulus_index": 16,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/noi_048.jpg",
+      "sha256": "89ea99c54eac52537d47b5cac01460b28ca07c2c4ed5d5686ef6c3544aa6b3c5",
+      "source_image_name": "noi_048.jpg",
+      "stimulus_id": "noi_048.jpg",
+      "stimulus_index": 17,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/noi_049.jpg",
+      "sha256": "431d1b104d8c4a6763ccbabc92ba47d4df7e394916a792d9b1ec3cdac064462a",
+      "source_image_name": "noi_049.jpg",
+      "stimulus_id": "noi_049.jpg",
+      "stimulus_index": 18,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/noi_050.jpg",
+      "sha256": "6a1aa2d168388f33ae67a3fe91ceba05f691fa1a9fe8ebdfdb5c4b57d7d91c8c",
+      "source_image_name": "noi_050.jpg",
+      "stimulus_id": "noi_050.jpg",
+      "stimulus_index": 19,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/noi_051.jpg",
+      "sha256": "b0cc8430b18738112e045ccde0bc56a4eae21e526b8f7143987091bc0aebb6f2",
+      "source_image_name": "noi_051.jpg",
+      "stimulus_id": "noi_051.jpg",
+      "stimulus_index": 20,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/noi_052.jpg",
+      "sha256": "4fd5f47d4aed3297a4c7baa360cccd966e836ce2b06dd5c11c06a30708238398",
+      "source_image_name": "noi_052.jpg",
+      "stimulus_id": "noi_052.jpg",
+      "stimulus_index": 21,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/noi_053.jpg",
+      "sha256": "da18d959f2afa332a44264d05641082e2070a5422980bbe52e0d888edacaf267",
+      "source_image_name": "noi_053.jpg",
+      "stimulus_id": "noi_053.jpg",
+      "stimulus_index": 22,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/patch_062.jpg",
+      "sha256": "5a34708459da09da357398d6adc32a5c9f787cfa0503db728a40e23d19b7f3fa",
+      "source_image_name": "patch_062.jpg",
+      "stimulus_id": "patch_062.jpg",
+      "stimulus_index": 23,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/patch_063.jpg",
+      "sha256": "9c56f0e677776a0e1671e9eb7c7e7789ba4d5e9c701c82c1d30d823985a6a1d8",
+      "source_image_name": "patch_063.jpg",
+      "stimulus_id": "patch_063.jpg",
+      "stimulus_index": 24,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/patch_064.jpg",
+      "sha256": "4ef106a83c176e23203f2f34e9d7d72a7318fe1100f1336da3cb2167c5ec7574",
+      "source_image_name": "patch_064.jpg",
+      "stimulus_id": "patch_064.jpg",
+      "stimulus_index": 25,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/patch_065.jpg",
+      "sha256": "e0133001242e80e0dfc5c5544e1639496693e7c8e3d406d10ebd757fc70331ac",
+      "source_image_name": "patch_065.jpg",
+      "stimulus_id": "patch_065.jpg",
+      "stimulus_index": 26,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/rand_075.jpg",
+      "sha256": "b851ce8b8a2573d2763a8f7fca2825df34cf215d321bd42ed2a015893e5fbe8f",
+      "source_image_name": "rand_075.jpg",
+      "stimulus_id": "rand_075.jpg",
+      "stimulus_index": 27,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/rand_076.jpg",
+      "sha256": "31e7a7e7b6d4ccae17c7d79c9742e8fedcab603c3ca4233422b0792e1fb02286",
+      "source_image_name": "rand_076.jpg",
+      "stimulus_id": "rand_076.jpg",
+      "stimulus_index": 28,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/rand_077.jpg",
+      "sha256": "94eada3d59ad03f629a21c2d958b9c44de91fe74971b4cea0e1b0c0e2a2e1ef2",
+      "source_image_name": "rand_077.jpg",
+      "stimulus_id": "rand_077.jpg",
+      "stimulus_index": 29,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/rand_078.jpg",
+      "sha256": "6f3c826e4ffe118856bfc6746ff6129114bf268a590cd9efd4196dd8aa53daec",
+      "source_image_name": "rand_078.jpg",
+      "stimulus_id": "rand_078.jpg",
+      "stimulus_index": 30,
+      "width": 1024
+    },
+    {
+      "category": "Manipulated Images",
+      "height": 768,
+      "relative_image_path": "Manipulated Images/rand_079.jpg",
+      "sha256": "c8e7d7258b435421d3aac03bd97a6eefd45f4727989a201144656b4fa83710ec",
+      "source_image_name": "rand_079.jpg",
+      "stimulus_id": "rand_079.jpg",
+      "stimulus_index": 31,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/ind_016.jpg",
+      "sha256": "955a91428004e2219302e51d3a07de03b18d1ae61edfbc85d3da1d68e1eaa464",
+      "source_image_name": "ind_016.jpg",
+      "stimulus_id": "ind_016.jpg",
+      "stimulus_index": 32,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/ind_017.jpg",
+      "sha256": "12c9f02fc9c492ddc705da5c0cb2f6169192be0cf1125123a9628a8fdf8a918d",
+      "source_image_name": "ind_017.jpg",
+      "stimulus_id": "ind_017.jpg",
+      "stimulus_index": 33,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/ind_018.jpg",
+      "sha256": "aa62caa133800480d1ca9b33701fbfd2d18d1562f58ba530bccdfd2f6be57138",
+      "source_image_name": "ind_018.jpg",
+      "stimulus_id": "ind_018.jpg",
+      "stimulus_index": 34,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/ind_019.jpg",
+      "sha256": "d96d2ba2b1b1dd687532f4000b2244ff774869bd21a9086610a39168451e283f",
+      "source_image_name": "ind_019.jpg",
+      "stimulus_id": "ind_019.jpg",
+      "stimulus_index": 35,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/ind_020.jpg",
+      "sha256": "8adcf8c03d6edf119eb845444c3c7f4d8a9fc17d586150d86a0ea8f69d06bec6",
+      "source_image_name": "ind_020.jpg",
+      "stimulus_id": "ind_020.jpg",
+      "stimulus_index": 36,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/ind_021.jpg",
+      "sha256": "4f0d01c196383cd7a70ef2a1acdbc9637d9d5f20caddbc2b9d2a47b4ee9d474a",
+      "source_image_name": "ind_021.jpg",
+      "stimulus_id": "ind_021.jpg",
+      "stimulus_index": 37,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/ind_022.jpg",
+      "sha256": "69a296b17269f738ecc7c6cc65bce85b6f5e59962779843ef6f2f9f489788b6b",
+      "source_image_name": "ind_022.jpg",
+      "stimulus_id": "ind_022.jpg",
+      "stimulus_index": 38,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/ind_023.jpg",
+      "sha256": "01fe8f27fec48579c5b822992d4746cbc2276f8f813e2adfbe9b73796dd057db",
+      "source_image_name": "ind_023.jpg",
+      "stimulus_id": "ind_023.jpg",
+      "stimulus_index": 39,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/ind_024.jpg",
+      "sha256": "3074c66ee8d1eecea03e85d0ffa160797edfe54e413df6ae4c02d50ae30c7188",
+      "source_image_name": "ind_024.jpg",
+      "stimulus_id": "ind_024.jpg",
+      "stimulus_index": 40,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/ind_025.jpg",
+      "sha256": "cf48c4f1404e5896785a42d6d9833ba9335bd375e72089ddd229a784d7bec481",
+      "source_image_name": "ind_025.jpg",
+      "stimulus_id": "ind_025.jpg",
+      "stimulus_index": 41,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/land_026.jpg",
+      "sha256": "9bd3a5b636a6dbbf0658eb41a8c8db5af92b307bf07372757f0e270930779d2a",
+      "source_image_name": "land_026.jpg",
+      "stimulus_id": "land_026.jpg",
+      "stimulus_index": 42,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/land_027.jpg",
+      "sha256": "7e4a283b56011bdb0577dd48ca0cfd182970bd3f258a560a5e09c26433280f72",
+      "source_image_name": "land_027.jpg",
+      "stimulus_id": "land_027.jpg",
+      "stimulus_index": 43,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/land_028.jpg",
+      "sha256": "89fbc0289b487d1a9a08d804b515655d4c09c55b85f39135e7a8e6dcb7263ce3",
+      "source_image_name": "land_028.jpg",
+      "stimulus_id": "land_028.jpg",
+      "stimulus_index": 44,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/land_029.jpg",
+      "sha256": "42f773340215eca9f7d1c2036e47e9f09ff9ffe0c6eda96ec77dd5db70691402",
+      "source_image_name": "land_029.jpg",
+      "stimulus_id": "land_029.jpg",
+      "stimulus_index": 45,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/land_030.jpg",
+      "sha256": "7933d5a7f873793cb25e223ca21f306c35284ec2757ef04b2dfbe41dd506e78c",
+      "source_image_name": "land_030.jpg",
+      "stimulus_id": "land_030.jpg",
+      "stimulus_index": 46,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/outman_054.jpg",
+      "sha256": "106ec92053ac955b2808e002ddf2e1016c60dff9c6a03bbae9cda3375022087d",
+      "source_image_name": "outman_054.jpg",
+      "stimulus_id": "outman_054.jpg",
+      "stimulus_index": 47,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/outman_055.jpg",
+      "sha256": "f6275462da3909181ea19a28e1728641ba737c867286776e1f9cba7240c8528f",
+      "source_image_name": "outman_055.jpg",
+      "stimulus_id": "outman_055.jpg",
+      "stimulus_index": 48,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/outman_056.jpg",
+      "sha256": "bd988c62071230ba90caa8c54d07e727dcad603eb10165a1f31c14f953a2eec6",
+      "source_image_name": "outman_056.jpg",
+      "stimulus_id": "outman_056.jpg",
+      "stimulus_index": 49,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/outman_057.jpg",
+      "sha256": "4fe20c7a07175d375f6738f8707944c96a9364432ff4bd569afc3fe85f1a747f",
+      "source_image_name": "outman_057.jpg",
+      "stimulus_id": "outman_057.jpg",
+      "stimulus_index": 50,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/outman_058.jpg",
+      "sha256": "5a14cb17f0091e5a51183645b5ad78a53090adcec9114e8859f1d53041898c03",
+      "source_image_name": "outman_058.jpg",
+      "stimulus_id": "outman_058.jpg",
+      "stimulus_index": 51,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/outman_059.jpg",
+      "sha256": "00da8428da607976eaa287d3cb0790944a46d77ca943523d56283a6432e09722",
+      "source_image_name": "outman_059.jpg",
+      "stimulus_id": "outman_059.jpg",
+      "stimulus_index": 52,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/outman_060.jpg",
+      "sha256": "ce802312bd68060d413ae77662989550616eaf3c58f43e996abd36db87a534a2",
+      "source_image_name": "outman_060.jpg",
+      "stimulus_id": "outman_060.jpg",
+      "stimulus_index": 53,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/outman_061.jpg",
+      "sha256": "e7ac65b6c5f0089e2a9ff0d14d5742865bf88f8ea5a8e54b50dea394a556d955",
+      "source_image_name": "outman_061.jpg",
+      "stimulus_id": "outman_061.jpg",
+      "stimulus_index": 54,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/sat_080.jpg",
+      "sha256": "bbf20c2a8fcf22e99b27fd4ba5c222f62e62caeb15295111513b0f8f34e46df1",
+      "source_image_name": "sat_080.jpg",
+      "stimulus_id": "sat_080.jpg",
+      "stimulus_index": 55,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/sat_081.jpg",
+      "sha256": "bffa1f8c6ded707fd98c7c56a8310267b56a0a2efa3881a2204cdf7e49a774d6",
+      "source_image_name": "sat_081.jpg",
+      "stimulus_id": "sat_081.jpg",
+      "stimulus_index": 56,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/sat_082.jpg",
+      "sha256": "c229d080c725bf5d3c18afae77d4a942cdd9bcbbb6949ba7320287aa3d2d4410",
+      "source_image_name": "sat_082.jpg",
+      "stimulus_id": "sat_082.jpg",
+      "stimulus_index": 57,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/sat_083.jpg",
+      "sha256": "ff04e67333c9ce8fb849d2640bc32f7ce732ba2edf1867e05edba720ff043c68",
+      "source_image_name": "sat_083.jpg",
+      "stimulus_id": "sat_083.jpg",
+      "stimulus_index": 58,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/sat_084.jpg",
+      "sha256": "b02530f60e3f9b9c5efd2f16c5c51c390f0364abee8077082d9c3a37541dadd5",
+      "source_image_name": "sat_084.jpg",
+      "stimulus_id": "sat_084.jpg",
+      "stimulus_index": 59,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/sat_085.jpg",
+      "sha256": "a2ab38a07e99b6b8067cc4b67db6192d378d41b4038248004a3d4980bcab29ae",
+      "source_image_name": "sat_085.jpg",
+      "stimulus_id": "sat_085.jpg",
+      "stimulus_index": 60,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/sat_086.jpg",
+      "sha256": "1b7c5787483de0f7a5db9f0524cec557677481337457d06caf21274b182e0db9",
+      "source_image_name": "sat_086.jpg",
+      "stimulus_id": "sat_086.jpg",
+      "stimulus_index": 61,
+      "width": 1024
+    },
+    {
+      "category": "Natural Scenes",
+      "height": 768,
+      "relative_image_path": "Natural Scenes/sat_087.jpg",
+      "sha256": "5438a75911a16f2933efc91e994c37147aff4b7e969abd5694c0020df338c1f2",
+      "source_image_name": "sat_087.jpg",
+      "stimulus_id": "sat_087.jpg",
+      "stimulus_index": 62,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/act_001.jpg",
+      "sha256": "d3bb50a9a52fb1e058bb79a03681d1c8eceaf16b00d4bece0e27e2268d993859",
+      "source_image_name": "act_001.jpg",
+      "stimulus_id": "act_001.jpg",
+      "stimulus_index": 63,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/act_002.jpg",
+      "sha256": "84bacfdd27627adea192e25feb74bd73744897b6a459eb26b777ea025e8b1ae5",
+      "source_image_name": "act_002.jpg",
+      "stimulus_id": "act_002.jpg",
+      "stimulus_index": 64,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/act_003.jpg",
+      "sha256": "19d7e22887df594040a039bc06866a6a6b3c5ae69f4f91608499697d48c92b4d",
+      "source_image_name": "act_003.jpg",
+      "stimulus_id": "act_003.jpg",
+      "stimulus_index": 65,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/act_004.jpg",
+      "sha256": "35fe47d2bd8f30d9128aec1a27988d1c5a10fb1446e97fbdca72d485a0dbe5e6",
+      "source_image_name": "act_004.jpg",
+      "stimulus_id": "act_004.jpg",
+      "stimulus_index": 66,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/act_005.jpg",
+      "sha256": "f6b631e4a25d0aa2d430305ff7efc84edda62b8ade96dced1295be2d0fb4677e",
+      "source_image_name": "act_005.jpg",
+      "stimulus_id": "act_005.jpg",
+      "stimulus_index": 67,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/por_071.jpg",
+      "sha256": "c31f76d24217fac6b73eab65d1e1136e2649cc2fb98bd43bf43360066484a5d9",
+      "source_image_name": "por_071.jpg",
+      "stimulus_id": "por_071.jpg",
+      "stimulus_index": 68,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/por_072.jpg",
+      "sha256": "08ba3647c20ab27722940482775aef8c10583e960338f7ba9b79a4a0391bca06",
+      "source_image_name": "por_072.jpg",
+      "stimulus_id": "por_072.jpg",
+      "stimulus_index": 69,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/por_073.jpg",
+      "sha256": "08effd7e7ae29493b5178234e445922e33644af3003c758ee7e889e866c62ce0",
+      "source_image_name": "por_073.jpg",
+      "stimulus_id": "por_073.jpg",
+      "stimulus_index": 70,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/por_074.jpg",
+      "sha256": "22cd412c08c4044caa1600427314a2f8441a622470fd066e3848b0420671bb2d",
+      "source_image_name": "por_074.jpg",
+      "stimulus_id": "por_074.jpg",
+      "stimulus_index": 71,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/soc_088.jpg",
+      "sha256": "791e003004ec6419b07d798dfd9ab6df6291f22ad9538625d5c59e1b94d34f76",
+      "source_image_name": "soc_088.jpg",
+      "stimulus_id": "soc_088.jpg",
+      "stimulus_index": 72,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/soc_089.jpg",
+      "sha256": "36380dc4106df1f505f28fa82817a68b5a5a1d268e55297e96665646360114b9",
+      "source_image_name": "soc_089.jpg",
+      "stimulus_id": "soc_089.jpg",
+      "stimulus_index": 73,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/soc_090.jpg",
+      "sha256": "c07c32ce936cd04e5c7ed7b473c0f046f3f20636931a7e2e41e46675ec40a7a7",
+      "source_image_name": "soc_090.jpg",
+      "stimulus_id": "soc_090.jpg",
+      "stimulus_index": 74,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/soc_091.jpg",
+      "sha256": "13bf501c36ae5a76bd2f903eaac244be691d6eb29fcece26630a0a8328cf2f23",
+      "source_image_name": "soc_091.jpg",
+      "stimulus_id": "soc_091.jpg",
+      "stimulus_index": 75,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/soc_092.jpg",
+      "sha256": "a4a130ecdc954b9cbf99a70981bb422b7f95508eae260b4f399ab666a70777a4",
+      "source_image_name": "soc_092.jpg",
+      "stimulus_id": "soc_092.jpg",
+      "stimulus_index": 76,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/soc_093.jpg",
+      "sha256": "a539cb716c874e45aaeff19209a7fcecd98c5642b74c689a2eae7d3b956ff01a",
+      "source_image_name": "soc_093.jpg",
+      "stimulus_id": "soc_093.jpg",
+      "stimulus_index": 77,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/soc_094.jpg",
+      "sha256": "9f9d612388576b0d212127235af73b896aa45e43c7d71adecffa6decb1646f79",
+      "source_image_name": "soc_094.jpg",
+      "stimulus_id": "soc_094.jpg",
+      "stimulus_index": 78,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/soc_095.jpg",
+      "sha256": "94cf0deb72339188f365efc20bc2699a94144ab62dd5d59cae3340f9a17eaddb",
+      "source_image_name": "soc_095.jpg",
+      "stimulus_id": "soc_095.jpg",
+      "stimulus_index": 79,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/soc_096.jpg",
+      "sha256": "c57fd13f37382daa41b73a52d5c20406270d6b9a2adfc63fca7d0cbe17b27c0e",
+      "source_image_name": "soc_096.jpg",
+      "stimulus_id": "soc_096.jpg",
+      "stimulus_index": 80,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/soc_097.jpg",
+      "sha256": "e12ce1e6965476006625a522aee677ceeb3292ec4d10571da59da1c70c17d620",
+      "source_image_name": "soc_097.jpg",
+      "stimulus_id": "soc_097.jpg",
+      "stimulus_index": 81,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/soc_098.jpg",
+      "sha256": "9ceba64415eec100da6e0a36510e60fc4acd13e1a2b9ae368d26aca2cef9f0f6",
+      "source_image_name": "soc_098.jpg",
+      "stimulus_id": "soc_098.jpg",
+      "stimulus_index": 82,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/soc_099.jpg",
+      "sha256": "9e2d97fdc3826196f0095074da203dca6fbbdbaeda22fc782d1d6a186c338458",
+      "source_image_name": "soc_099.jpg",
+      "stimulus_id": "soc_099.jpg",
+      "stimulus_index": 83,
+      "width": 1024
+    },
+    {
+      "category": "Social Scenes",
+      "height": 768,
+      "relative_image_path": "Social Scenes/soc_100.jpg",
+      "sha256": "e3dfdc6bc296de192f341230fdf4860d511226792e8acd340f663d2ef6399214",
+      "source_image_name": "soc_100.jpg",
+      "stimulus_id": "soc_100.jpg",
+      "stimulus_index": 84,
+      "width": 1024
+    },
+    {
+      "category": "Synthetic Images",
+      "height": 768,
+      "relative_image_path": "Synthetic Images/art_006.jpg",
+      "sha256": "b58d41f00e9b3d9f1e17b7af39ae34a835704dfc153675ed293748f1d6d32a89",
+      "source_image_name": "art_006.jpg",
+      "stimulus_id": "art_006.jpg",
+      "stimulus_index": 85,
+      "width": 1024
+    },
+    {
+      "category": "Synthetic Images",
+      "height": 768,
+      "relative_image_path": "Synthetic Images/art_007.jpg",
+      "sha256": "79d65284f8e37fcdc0e552fcb117f0376215fa66f11048db4a2a4d7ae0917b7e",
+      "source_image_name": "art_007.jpg",
+      "stimulus_id": "art_007.jpg",
+      "stimulus_index": 86,
+      "width": 1024
+    },
+    {
+      "category": "Synthetic Images",
+      "height": 768,
+      "relative_image_path": "Synthetic Images/art_008.jpg",
+      "sha256": "b140600125308e0be786bcb5d36ae36034b6dff3ccbb5e13481739c2520feb13",
+      "source_image_name": "art_008.jpg",
+      "stimulus_id": "art_008.jpg",
+      "stimulus_index": 87,
+      "width": 1024
+    },
+    {
+      "category": "Synthetic Images",
+      "height": 768,
+      "relative_image_path": "Synthetic Images/art_009.jpg",
+      "sha256": "c0ce3cc02fe4907267d1909200f0c0351c7c1c09514348937dfef4d32e4f6bad",
+      "source_image_name": "art_009.jpg",
+      "stimulus_id": "art_009.jpg",
+      "stimulus_index": 88,
+      "width": 1024
+    },
+    {
+      "category": "Synthetic Images",
+      "height": 768,
+      "relative_image_path": "Synthetic Images/art_010.jpg",
+      "sha256": "68b156ba1d0333ea06c5da7ed2cff17954270294f13bab44265ec64aea33294c",
+      "source_image_name": "art_010.jpg",
+      "stimulus_id": "art_010.jpg",
+      "stimulus_index": 89,
+      "width": 1024
+    },
+    {
+      "category": "Synthetic Images",
+      "height": 768,
+      "relative_image_path": "Synthetic Images/art_011.jpg",
+      "sha256": "037a3fa173eff62834884fa92cedcaaea0d1b6780e96ebca2ca9ccd013a4ccaa",
+      "source_image_name": "art_011.jpg",
+      "stimulus_id": "art_011.jpg",
+      "stimulus_index": 90,
+      "width": 1024
+    },
+    {
+      "category": "Synthetic Images",
+      "height": 768,
+      "relative_image_path": "Synthetic Images/cat_012.jpg",
+      "sha256": "9bf661acc04839d1d25491ff260bc2aa4242996129ddbb9333b918278dc9449d",
+      "source_image_name": "cat_012.jpg",
+      "stimulus_id": "cat_012.jpg",
+      "stimulus_index": 91,
+      "width": 1024
+    },
+    {
+      "category": "Synthetic Images",
+      "height": 768,
+      "relative_image_path": "Synthetic Images/cat_013.jpg",
+      "sha256": "dc4010c3471eca89ac165d03e7c02df56ef7c7b3dd7e869ad6bfcee71e091884",
+      "source_image_name": "cat_013.jpg",
+      "stimulus_id": "cat_013.jpg",
+      "stimulus_index": 92,
+      "width": 1024
+    },
+    {
+      "category": "Synthetic Images",
+      "height": 768,
+      "relative_image_path": "Synthetic Images/cat_014.jpg",
+      "sha256": "4ab5c52e73894958b4c0cea0ae9e6a497353f6100872a5d48022c5f69d1287de",
+      "source_image_name": "cat_014.jpg",
+      "stimulus_id": "cat_014.jpg",
+      "stimulus_index": 93,
+      "width": 1024
+    },
+    {
+      "category": "Synthetic Images",
+      "height": 768,
+      "relative_image_path": "Synthetic Images/cat_015.jpg",
+      "sha256": "1a21b7d061121eb628509edd006d14c98c3ed3cbca734d05596ccf3df6532f9e",
+      "source_image_name": "cat_015.jpg",
+      "stimulus_id": "cat_015.jpg",
+      "stimulus_index": 94,
+      "width": 1024
+    },
+    {
+      "category": "Synthetic Images",
+      "height": 768,
+      "relative_image_path": "Synthetic Images/pat_066.jpg",
+      "sha256": "814e0deb758750a052692449837db79cd58f69c0e6062c11c2d0c1683875ce5a",
+      "source_image_name": "pat_066.jpg",
+      "stimulus_id": "pat_066.jpg",
+      "stimulus_index": 95,
+      "width": 1024
+    },
+    {
+      "category": "Synthetic Images",
+      "height": 768,
+      "relative_image_path": "Synthetic Images/pat_067.jpg",
+      "sha256": "0d21c1f2c08ba6478d72e41fce9222af52d6f76894dccd5dec936eee79a29b1c",
+      "source_image_name": "pat_067.jpg",
+      "stimulus_id": "pat_067.jpg",
+      "stimulus_index": 96,
+      "width": 1024
+    },
+    {
+      "category": "Synthetic Images",
+      "height": 768,
+      "relative_image_path": "Synthetic Images/pat_068.jpg",
+      "sha256": "c154f0b3515e174266ca1b9dddd673240bc001fac85d82aa8364f115d8ce78a7",
+      "source_image_name": "pat_068.jpg",
+      "stimulus_id": "pat_068.jpg",
+      "stimulus_index": 97,
+      "width": 1024
+    },
+    {
+      "category": "Synthetic Images",
+      "height": 768,
+      "relative_image_path": "Synthetic Images/pat_069.jpg",
+      "sha256": "f4dc303826259d325584e7fe157c90dab7b51a8e867fa615cc962a8e8a65b57d",
+      "source_image_name": "pat_069.jpg",
+      "stimulus_id": "pat_069.jpg",
+      "stimulus_index": 98,
+      "width": 1024
+    },
+    {
+      "category": "Synthetic Images",
+      "height": 768,
+      "relative_image_path": "Synthetic Images/pat_070.jpg",
+      "sha256": "1b9dbc39168824e5f79e642b481dcfe3b3908e0f37cb72d283406e0f04473a66",
+      "source_image_name": "pat_070.jpg",
+      "stimulus_id": "pat_070.jpg",
+      "stimulus_index": 99,
+      "width": 1024
+    }
+  ],
+  "other_files": [],
+  "subjects": [
+    {
+      "file": "000.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "b276f841a38b35aa4d589903974f2caf4bb2d7567d3c6ce37f8e5f64fda62ec0",
+      "size_bytes": 53921,
+      "subject_id": "000",
+      "subject_numeric_id": 0
+    },
+    {
+      "file": "001.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "229ef8fcf302e78044206e3a7e0c65bded712cb5273d284fa43a51f53eb40734",
+      "size_bytes": 43820,
+      "subject_id": "001",
+      "subject_numeric_id": 1
+    },
+    {
+      "file": "002.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "40ad711bbac6c8a73f49e0426d256260cc8aac6d028417ea6825efb95efbb129",
+      "size_bytes": 52465,
+      "subject_id": "002",
+      "subject_numeric_id": 2
+    },
+    {
+      "file": "003.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "8eb30ccf625c1dde8f9f960c0522c24298fb22f812a0e1e863e42a2a21b1f476",
+      "size_bytes": 55510,
+      "subject_id": "003",
+      "subject_numeric_id": 3
+    },
+    {
+      "file": "004.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "1f80c41f48310c4e8a73a16d64b36babac34305401a3ec981ca48595ba255c3c",
+      "size_bytes": 46333,
+      "subject_id": "004",
+      "subject_numeric_id": 4
+    },
+    {
+      "file": "005.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "9f5e543de3884c149b331984b6c2bb75138254843708d7916f13d7a2d8ce8815",
+      "size_bytes": 49786,
+      "subject_id": "005",
+      "subject_numeric_id": 5
+    },
+    {
+      "file": "006.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "361dbf1ce31006c2ac5038130298820b814f23dcb86ce109ac72d5e8c0b6a69a",
+      "size_bytes": 47198,
+      "subject_id": "006",
+      "subject_numeric_id": 6
+    },
+    {
+      "file": "007.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "4611cbbb42467208a499afbf564b06161067eb35ab9b0f1ba245e18bf70421d8",
+      "size_bytes": 61360,
+      "subject_id": "007",
+      "subject_numeric_id": 7
+    },
+    {
+      "file": "008.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "c4a91a0ef2596bfae71aa8558cca0506916f5b662da2f47a1e2858ce077803a7",
+      "size_bytes": 48734,
+      "subject_id": "008",
+      "subject_numeric_id": 8
+    },
+    {
+      "file": "009.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "f182983b252538b49f73052653f4804c19f19d36d4a72c3c5e7581e4a12196d9",
+      "size_bytes": 48258,
+      "subject_id": "009",
+      "subject_numeric_id": 9
+    },
+    {
+      "file": "011.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "f17920e3600771be62743aadcf1bda61f523b47acb3851d023d89073dc8aa6be",
+      "size_bytes": 53859,
+      "subject_id": "011",
+      "subject_numeric_id": 11
+    },
+    {
+      "file": "012.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "f9ecc86d552546c31574b7240c346d3d87c4ba0fca2b833ec6affd897f0b407e",
+      "size_bytes": 65586,
+      "subject_id": "012",
+      "subject_numeric_id": 12
+    },
+    {
+      "file": "013.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "dfbba7eafd03805f113fc35ea166df0732be4b1e9bd59e14cc993067edc22b5d",
+      "size_bytes": 43235,
+      "subject_id": "013",
+      "subject_numeric_id": 13
+    },
+    {
+      "file": "016.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "b19f90f1b4d8b9c26cb365cb083bc446f2aa34d7dc50308c0d13dbc5bd26edcf",
+      "size_bytes": 57980,
+      "subject_id": "016",
+      "subject_numeric_id": 16
+    },
+    {
+      "file": "017.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "1c0cfc85a2c14b0499f78f37844e5e4eebf5450a7b414883bf2d193bed72c0aa",
+      "size_bytes": 61665,
+      "subject_id": "017",
+      "subject_numeric_id": 17
+    },
+    {
+      "file": "019.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "9170e236c8782b31e3d93020df4682f4b9188230f6f42c3f1153e9bdd095dac3",
+      "size_bytes": 43134,
+      "subject_id": "019",
+      "subject_numeric_id": 19
+    },
+    {
+      "file": "020.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "7550f1e31ed15c69864c8d5312ea5c6e2038e284a888fe01da8c19cc585a3f1c",
+      "size_bytes": 53963,
+      "subject_id": "020",
+      "subject_numeric_id": 20
+    },
+    {
+      "file": "021.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "a252d7c698e212db6c661786c715a009f4cffdf54a0461f03d5d78bae91e59ff",
+      "size_bytes": 59132,
+      "subject_id": "021",
+      "subject_numeric_id": 21
+    },
+    {
+      "file": "022.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "716f5c8a54d9bfe90b7cd5ee7014dd9f951e827a12f99c4ff4aaa307a451c7de",
+      "size_bytes": 51907,
+      "subject_id": "022",
+      "subject_numeric_id": 22
+    },
+    {
+      "file": "023.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "66b7ae38973274062206b8f4904f493ab562c36af1b6fd30df9971086bfe22f5",
+      "size_bytes": 60899,
+      "subject_id": "023",
+      "subject_numeric_id": 23
+    },
+    {
+      "file": "024.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "35e1fd137f24e376736b66be5727b4076ed69eedcbcfad8b189aa76809eb6364",
+      "size_bytes": 63350,
+      "subject_id": "024",
+      "subject_numeric_id": 24
+    },
+    {
+      "file": "025.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "6dcb9e595aa9fb5964d458bf40ce8bc63fc714ebc0050611c81de2a05ee31061",
+      "size_bytes": 51876,
+      "subject_id": "025",
+      "subject_numeric_id": 25
+    },
+    {
+      "file": "026.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "28b81e7eca69a28483dfbd0b7800681436ceed10b2149d064f7ef2c98e58c925",
+      "size_bytes": 53645,
+      "subject_id": "026",
+      "subject_numeric_id": 26
+    },
+    {
+      "file": "028.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "df7e2f9ef07a54917683a820d2f47e3afb28eae39d445d6d365a76b565cadf50",
+      "size_bytes": 46292,
+      "subject_id": "028",
+      "subject_numeric_id": 28
+    },
+    {
+      "file": "029.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "baa307b231529d8722a0ec5b9989c062fad51cf06528a7201954a93c918e7fca",
+      "size_bytes": 51762,
+      "subject_id": "029",
+      "subject_numeric_id": 29
+    },
+    {
+      "file": "031.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "ca87fe925794068e93a22a51765011af101e2d4e909144ae4a1288e3dd211977",
+      "size_bytes": 52518,
+      "subject_id": "031",
+      "subject_numeric_id": 31
+    },
+    {
+      "file": "032.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "eadee10f20e086f625ad40c3d10ca0acca4eb5be8011f9e81a4a82ecd9800c4f",
+      "size_bytes": 56923,
+      "subject_id": "032",
+      "subject_numeric_id": 32
+    },
+    {
+      "file": "033.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "2127d12754d35f0f4c84a1829218f5e2b8daf7ba857623ed9cd8b566d130bea5",
+      "size_bytes": 52443,
+      "subject_id": "033",
+      "subject_numeric_id": 33
+    },
+    {
+      "file": "034.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "0cc109f948a302937b875314d73e34389718657f0bdbf2fe5e647a23a4ef0a5e",
+      "size_bytes": 58408,
+      "subject_id": "034",
+      "subject_numeric_id": 34
+    },
+    {
+      "file": "035.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "70822df9a056519551d41c6356cbea5dd9fcc078779e7cde1e352b3cdf6f9008",
+      "size_bytes": 44449,
+      "subject_id": "035",
+      "subject_numeric_id": 35
+    },
+    {
+      "file": "036.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "ca3a9dd9544186662c21d7de037a30d9badb490faa513d14724e3f8e67c0dca3",
+      "size_bytes": 43021,
+      "subject_id": "036",
+      "subject_numeric_id": 36
+    },
+    {
+      "file": "037.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "47395ff505eb387a78d3ae6704121cc5d50e839a18343b16c091afbd44c19172",
+      "size_bytes": 48383,
+      "subject_id": "037",
+      "subject_numeric_id": 37
+    },
+    {
+      "file": "039.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "c4a4a8e2ee2b8f796a3ef3bbb874099398e9ce9873bb10154319bfddcd2cf1a0",
+      "size_bytes": 46749,
+      "subject_id": "039",
+      "subject_numeric_id": 39
+    },
+    {
+      "file": "040.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "4ff45066b7ace1f78795873c394d1f7deecb39327a6d07e98dd600b5d6311c99",
+      "size_bytes": 52245,
+      "subject_id": "040",
+      "subject_numeric_id": 40
+    },
+    {
+      "file": "041.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "93cc0978f564c08ffffe84125ced5de19c6a09ead1bb6dacbfc1e948f1f51be3",
+      "size_bytes": 57042,
+      "subject_id": "041",
+      "subject_numeric_id": 41
+    },
+    {
+      "file": "042.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "0f3c86353fb611ad3f7e27dbf2ad4da9bc3aec3b307225e6c7394a8df22e35c2",
+      "size_bytes": 60783,
+      "subject_id": "042",
+      "subject_numeric_id": 42
+    },
+    {
+      "file": "043.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "43feea32a2b1f5cdae291f7fed5d14aa9e2e6633823df4593f9598c57d3f3d5a",
+      "size_bytes": 52576,
+      "subject_id": "043",
+      "subject_numeric_id": 43
+    },
+    {
+      "file": "044.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "40a75ec09cd84cfbc991749ca8353b3ebde4a073ad5184830d49037f106125b6",
+      "size_bytes": 42807,
+      "subject_id": "044",
+      "subject_numeric_id": 44
+    },
+    {
+      "file": "045.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "bd6541da5fe4e4621bd469ffc3c5dd1967c645050fd03e05a15cd30115929377",
+      "size_bytes": 52084,
+      "subject_id": "045",
+      "subject_numeric_id": 45
+    },
+    {
+      "file": "046.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "ecb50f9bf68d2ba6fadbdb4cbbc375cb79ddc6cfe0958e056c3e22d5118fc91b",
+      "size_bytes": 61727,
+      "subject_id": "046",
+      "subject_numeric_id": 46
+    },
+    {
+      "file": "049.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "fc09e4cf1c1a596e940d34fb41864634dec36ed712d184e9c0396c3d561a1d2a",
+      "size_bytes": 58055,
+      "subject_id": "049",
+      "subject_numeric_id": 49
+    },
+    {
+      "file": "050.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "2805bed247759517f2286945d83ab6dbc31f730608e522a6a085cf75fb9f963e",
+      "size_bytes": 47568,
+      "subject_id": "050",
+      "subject_numeric_id": 50
+    },
+    {
+      "file": "053.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "ac3e67933a43c6a0e20f91ce895022dcc12e2bf32d8a62c288e1d036ac43d996",
+      "size_bytes": 53534,
+      "subject_id": "053",
+      "subject_numeric_id": 53
+    },
+    {
+      "file": "054.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "f732c02126bbb9c38fc67feff5f224d8f01aeabd8898dbf6d47cb14f3b497542",
+      "size_bytes": 51159,
+      "subject_id": "054",
+      "subject_numeric_id": 54
+    },
+    {
+      "file": "055.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "4de4d5e7b84c7c813c088ebffc93541f71737b759b467334f4493024df195041",
+      "size_bytes": 48607,
+      "subject_id": "055",
+      "subject_numeric_id": 55
+    },
+    {
+      "file": "056.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "891bf0162022b8c7001b618e78166f8c0ad058faf312e0e0d05bf95c27853551",
+      "size_bytes": 47492,
+      "subject_id": "056",
+      "subject_numeric_id": 56
+    },
+    {
+      "file": "057.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "f08b84a2c62bbe2ce371089fe2c5b4a46ec70e277d32f083652b3382b3f90cf1",
+      "size_bytes": 62611,
+      "subject_id": "057",
+      "subject_numeric_id": 57
+    },
+    {
+      "file": "059.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "fc1fba3bea024eb82326e7c110630211a39ffb82af59ebde5676bb6c921880df",
+      "size_bytes": 61622,
+      "subject_id": "059",
+      "subject_numeric_id": 59
+    },
+    {
+      "file": "060.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "af8c5198010476f9bd8a1a474217813f4715f8d58e858b3d8b422c7af7f74289",
+      "size_bytes": 46790,
+      "subject_id": "060",
+      "subject_numeric_id": 60
+    },
+    {
+      "file": "062.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "3c5fd963016ed062f563d039207cf932c3a0f16af59a6bcb34773793ca8218e2",
+      "size_bytes": 44402,
+      "subject_id": "062",
+      "subject_numeric_id": 62
+    },
+    {
+      "file": "063.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "066196e26b0735972eeca29c69239a1897a4c9735a50894d664de705f6444787",
+      "size_bytes": 51490,
+      "subject_id": "063",
+      "subject_numeric_id": 63
+    },
+    {
+      "file": "064.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "33f5bf07c42677c92c99f89f9b99374cf8e714b77c7d3b62e6a3648172faf57d",
+      "size_bytes": 53297,
+      "subject_id": "064",
+      "subject_numeric_id": 64
+    },
+    {
+      "file": "065.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "ed1262aa810553ac0bd5bd43bbc0b98f311f0fa4998445215ef061ade215809f",
+      "size_bytes": 43228,
+      "subject_id": "065",
+      "subject_numeric_id": 65
+    },
+    {
+      "file": "066.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "dd8f9deaf968274b043180cfce9b9f3d7578f4acdfa499ca0bfdbd53eb10b84a",
+      "size_bytes": 46474,
+      "subject_id": "066",
+      "subject_numeric_id": 66
+    },
+    {
+      "file": "068.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "df4aa2781d4ca863d77351f53b8efb1b0b4293bf00ec7dc27881e4674dfc0508",
+      "size_bytes": 60754,
+      "subject_id": "068",
+      "subject_numeric_id": 68
+    },
+    {
+      "file": "069.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "5ce51e2103cce2ed527dc8e10720f9ece04d5efe9a0bff9e0d5e1630d81b572c",
+      "size_bytes": 39415,
+      "subject_id": "069",
+      "subject_numeric_id": 69
+    },
+    {
+      "file": "070.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "65dd5959b2fadd8da9a104815f2863ac39edb0da820a69ff0040a41b8ce33758",
+      "size_bytes": 46768,
+      "subject_id": "070",
+      "subject_numeric_id": 70
+    },
+    {
+      "file": "071.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "c1f423ebafce1f1d9c3ec6cf59632e3b9a917023845578838a460d9582aa9e14",
+      "size_bytes": 57287,
+      "subject_id": "071",
+      "subject_numeric_id": 71
+    },
+    {
+      "file": "072.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "ad892307afd7b5e2539485af9d15c656d419a83c0883e6ffa7a6e68a6b5620fe",
+      "size_bytes": 62466,
+      "subject_id": "072",
+      "subject_numeric_id": 72
+    },
+    {
+      "file": "073.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "d7de94850bb0b2105aad337d19717a5b24b6559897b6dca2c94d2a34ff811a7d",
+      "size_bytes": 57433,
+      "subject_id": "073",
+      "subject_numeric_id": 73
+    },
+    {
+      "file": "077.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "a233982982ecbae570d34d85c31dc5c14e4f87a2211e234b670060a85ccf773c",
+      "size_bytes": 61352,
+      "subject_id": "077",
+      "subject_numeric_id": 77
+    },
+    {
+      "file": "079.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "463ad09c787e8a81324d693d632b24684b0aa4abb6003dc2dab50275f00edc93",
+      "size_bytes": 42347,
+      "subject_id": "079",
+      "subject_numeric_id": 79
+    },
+    {
+      "file": "080.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "35571af34b553e1aecea32c7d4bc0708249985078cdb72a19744d2c3f2925893",
+      "size_bytes": 57253,
+      "subject_id": "080",
+      "subject_numeric_id": 80
+    },
+    {
+      "file": "081.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "4edd0236b7599a308a0c68ef25a0f66f00b9a37d46d33ac7ed60bc3a61d45e58",
+      "size_bytes": 68284,
+      "subject_id": "081",
+      "subject_numeric_id": 81
+    },
+    {
+      "file": "082.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "3875d7bd5e44a635aa24016292e719a0a3b7c717a68b1d80bcc0a5c741b84ee0",
+      "size_bytes": 56694,
+      "subject_id": "082",
+      "subject_numeric_id": 82
+    },
+    {
+      "file": "083.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "411d0d72a369e9ca4b4940020177062ec035a098287a3e342c50d995247365bc",
+      "size_bytes": 58438,
+      "subject_id": "083",
+      "subject_numeric_id": 83
+    },
+    {
+      "file": "084.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "c578663b6ac5ebb29a5bb7ecc462b2c6ab61016e978b027e76ac8b599a2a8bbe",
+      "size_bytes": 39634,
+      "subject_id": "084",
+      "subject_numeric_id": 84
+    },
+    {
+      "file": "085.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "4b4395761382163a5de7879b8b29dcfe298b0b1430f25c6545c9290a0424ee1f",
+      "size_bytes": 56022,
+      "subject_id": "085",
+      "subject_numeric_id": 85
+    },
+    {
+      "file": "086.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "651870ae3e56deb23d7487ae1e3d449b4d052937a0dbdd3f8c6747d703f092c4",
+      "size_bytes": 58083,
+      "subject_id": "086",
+      "subject_numeric_id": 86
+    },
+    {
+      "file": "087.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "f7e3d1efb6a14a0e2a0b53e95065beab3fb6246cf28420c01a5fb70408020640",
+      "size_bytes": 63424,
+      "subject_id": "087",
+      "subject_numeric_id": 87
+    },
+    {
+      "file": "088.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "e4de43b87eeec40b7ce06dc81a348e69267f745493fc1e55e7f5f993522915e4",
+      "size_bytes": 48725,
+      "subject_id": "088",
+      "subject_numeric_id": 88
+    },
+    {
+      "file": "089.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "7d7c3c41d32a9eec1c455c850a177c9fec67c99191a6a3830df43efcf3e99e05",
+      "size_bytes": 53265,
+      "subject_id": "089",
+      "subject_numeric_id": 89
+    },
+    {
+      "file": "090.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "e818eacc3466dfc290d61843a396acdd72b5353a6e55d873ec5be39da61c26e1",
+      "size_bytes": 41845,
+      "subject_id": "090",
+      "subject_numeric_id": 90
+    },
+    {
+      "file": "091.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "2c5eac7221eba51e7484f01974c71d1cd9cc3f0546fdebdc361825250bee34b2",
+      "size_bytes": 48582,
+      "subject_id": "091",
+      "subject_numeric_id": 91
+    },
+    {
+      "file": "094.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "1fe95c820bf5aa72b0c7e246fba80aa7ade8e52a2537479f31ff61c6f090cd5b",
+      "size_bytes": 48933,
+      "subject_id": "094",
+      "subject_numeric_id": 94
+    },
+    {
+      "file": "095.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "b4e29845937c7bca80d113b1fe07020057cb385770eb2268bbb67bbb24c1598a",
+      "size_bytes": 58881,
+      "subject_id": "095",
+      "subject_numeric_id": 95
+    },
+    {
+      "file": "097.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "6d4be91f38ef9040249dbab88df10ae44179edbd979496fed1e7df2a53bca730",
+      "size_bytes": 51748,
+      "subject_id": "097",
+      "subject_numeric_id": 97
+    },
+    {
+      "file": "099.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "479ff4cf42a94c2566cc7e516f5c254ef93f9736a5afac91f81f072e642f32bd",
+      "size_bytes": 52569,
+      "subject_id": "099",
+      "subject_numeric_id": 99
+    },
+    {
+      "file": "101.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "1ac57393a956f69604ae2a543c80ce08c2e32680850f8f30d140d291799e5413",
+      "size_bytes": 53982,
+      "subject_id": "101",
+      "subject_numeric_id": 101
+    },
+    {
+      "file": "102.xlsx",
+      "group": "HC",
+      "label": 0,
+      "sha256": "5b412a886907d7898dbc0afabbcab84c074f8dcd243aba38a9a667500279e385",
+      "size_bytes": 58207,
+      "subject_id": "102",
+      "subject_numeric_id": 102
+    },
+    {
+      "file": "203.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "ea463b96fb14c713fa4164e06f2bf927bb4d748e66b8a617cad0515b8f5f2cc6",
+      "size_bytes": 45625,
+      "subject_id": "203",
+      "subject_numeric_id": 203
+    },
+    {
+      "file": "204.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "fb4625a22fce4af42b429e6d42d8ae2894e0b3078fadfdb7a21787c2cbfa5822",
+      "size_bytes": 30123,
+      "subject_id": "204",
+      "subject_numeric_id": 204
+    },
+    {
+      "file": "205.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "55863de2d5d48edbaf7a03286862ded5f99d1c7ac460601a224c838c7cd20d92",
+      "size_bytes": 46194,
+      "subject_id": "205",
+      "subject_numeric_id": 205
+    },
+    {
+      "file": "206.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "51edcaa58cd2e4d10ed1ef1a1b3a696a92972cc9f0177419693b0c31d7108767",
+      "size_bytes": 39590,
+      "subject_id": "206",
+      "subject_numeric_id": 206
+    },
+    {
+      "file": "207.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "b1121901e2481e7f778b78eae057643f7ca97a5d4355c16cbebbb479d31022df",
+      "size_bytes": 36585,
+      "subject_id": "207",
+      "subject_numeric_id": 207
+    },
+    {
+      "file": "208.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "a51496aa82da0b45148d524c87e00854c9a832d1e90cdb3a92a1befa7f40c902",
+      "size_bytes": 41168,
+      "subject_id": "208",
+      "subject_numeric_id": 208
+    },
+    {
+      "file": "211.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "55ddf01402f6ecc1674a4deb47c09557a8b662d682f765a4c4d1f09ea932a35f",
+      "size_bytes": 36607,
+      "subject_id": "211",
+      "subject_numeric_id": 211
+    },
+    {
+      "file": "212.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "59b00fcb432159a6b9e5d2b6cc60b24b3ff00e292f7d971d91211a714c906771",
+      "size_bytes": 42148,
+      "subject_id": "212",
+      "subject_numeric_id": 212
+    },
+    {
+      "file": "213.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "1f9db173d834a7a0c4f4fcaf6f02d00092bdf2236218f91d10b2a56cc2e69437",
+      "size_bytes": 46739,
+      "subject_id": "213",
+      "subject_numeric_id": 213
+    },
+    {
+      "file": "214.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "3d164eb7785e65d87f632c18e96f815cca6be7b2a7e136d282b164b44e7829b0",
+      "size_bytes": 50030,
+      "subject_id": "214",
+      "subject_numeric_id": 214
+    },
+    {
+      "file": "215.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "60f307191bf9d99f433a718ee92920853049161b8bb5a3f2ad1e05011b3f1b85",
+      "size_bytes": 48991,
+      "subject_id": "215",
+      "subject_numeric_id": 215
+    },
+    {
+      "file": "216.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "1178418eb54a57814ec2dc8aa4659001111a8e0e67ed3c5aead44eb737e9af75",
+      "size_bytes": 29196,
+      "subject_id": "216",
+      "subject_numeric_id": 216
+    },
+    {
+      "file": "217.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "703270025aaaecc871f949c12f6da3d780b5ebe2d8aa60341d7b02300a368582",
+      "size_bytes": 48855,
+      "subject_id": "217",
+      "subject_numeric_id": 217
+    },
+    {
+      "file": "219.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "1126e63f281cba047c06fd58533b5512347615682801c4b1ca3732146b347a16",
+      "size_bytes": 49841,
+      "subject_id": "219",
+      "subject_numeric_id": 219
+    },
+    {
+      "file": "220.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "c1861ee3bb25fc5ff8a129000302decb9da65529e1e5bc5e825fc15edcface21",
+      "size_bytes": 39960,
+      "subject_id": "220",
+      "subject_numeric_id": 220
+    },
+    {
+      "file": "221.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "b6635e1d6ba7e9b97d71ae98d50769d0abb4074883d09efa7e264cb6fe76123d",
+      "size_bytes": 51763,
+      "subject_id": "221",
+      "subject_numeric_id": 221
+    },
+    {
+      "file": "222.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "1b169d2e298b92a1989ac60b9948d3c889dafe5ebfba9df7a26066e95a5413f3",
+      "size_bytes": 44007,
+      "subject_id": "222",
+      "subject_numeric_id": 222
+    },
+    {
+      "file": "223.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "b1c688b4d9a904b23f9525bc256c52ad9daa78b72ea0117db20b01acc69590d8",
+      "size_bytes": 53799,
+      "subject_id": "223",
+      "subject_numeric_id": 223
+    },
+    {
+      "file": "226.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "87d8b4cbc5c3368183dd98aff07f10b45b4dee7b38b2e861c472744e96c7f4fc",
+      "size_bytes": 34281,
+      "subject_id": "226",
+      "subject_numeric_id": 226
+    },
+    {
+      "file": "227.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "8db4d750412676518600b97885bf8187eaca1360a966e06185834025e3fe0be1",
+      "size_bytes": 30978,
+      "subject_id": "227",
+      "subject_numeric_id": 227
+    },
+    {
+      "file": "228.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "da5a8ea98ba924b62228fcdfbffae0cd332b0b5d53c903dc4221f82e3ca9e969",
+      "size_bytes": 53483,
+      "subject_id": "228",
+      "subject_numeric_id": 228
+    },
+    {
+      "file": "229.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "da2feffe48b92df3ad9d6e8ee7116dbd23d962b1db7581dfe27ac7ad26ff713f",
+      "size_bytes": 58298,
+      "subject_id": "229",
+      "subject_numeric_id": 229
+    },
+    {
+      "file": "230.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "354de7dab0dca92128a629b5137b2f53a63762496c059aad6c1e8ffe4d6b8b2d",
+      "size_bytes": 34090,
+      "subject_id": "230",
+      "subject_numeric_id": 230
+    },
+    {
+      "file": "231.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "61a7d34f686d124bcc16097905720ce2f626e66a7fb01e58dff60484aaed2cfd",
+      "size_bytes": 50772,
+      "subject_id": "231",
+      "subject_numeric_id": 231
+    },
+    {
+      "file": "232.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "30270f47095b437d99ccd63b8eb7cff2b343e22f366a9381e7ea18d27727d729",
+      "size_bytes": 49676,
+      "subject_id": "232",
+      "subject_numeric_id": 232
+    },
+    {
+      "file": "234.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "a9b8000f37951dea078132e196ad2f962d61543cce6d03665e938c89b802488b",
+      "size_bytes": 53239,
+      "subject_id": "234",
+      "subject_numeric_id": 234
+    },
+    {
+      "file": "236.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "d3753485f21bfe9ef6f562924cc0b81f2256ce038e7c982fe9458a80e223eb1c",
+      "size_bytes": 36841,
+      "subject_id": "236",
+      "subject_numeric_id": 236
+    },
+    {
+      "file": "237.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "a1d126247300ff40136f15b7ac61525a8192dc8fda6f286a1d3f44c39e13a5d0",
+      "size_bytes": 58222,
+      "subject_id": "237",
+      "subject_numeric_id": 237
+    },
+    {
+      "file": "238.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "e60777e456a31fc11ce51889c1158433b76c54733d7ed69aff87a6cd07b6e807",
+      "size_bytes": 47613,
+      "subject_id": "238",
+      "subject_numeric_id": 238
+    },
+    {
+      "file": "239.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "7e1a301dfb088f03949480d1a8df15aeeb8811ce0c4d691eeff2a661f5c59ca2",
+      "size_bytes": 52544,
+      "subject_id": "239",
+      "subject_numeric_id": 239
+    },
+    {
+      "file": "240.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "d87af42d8f5908375b39b2a5948ad170a2000093d26fee1c802d9bd2e94012ae",
+      "size_bytes": 50049,
+      "subject_id": "240",
+      "subject_numeric_id": 240
+    },
+    {
+      "file": "241.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "aba0b467215d381cf2e25807ae8f4b58ba7323ab0a5fd9ac174a498438994636",
+      "size_bytes": 27887,
+      "subject_id": "241",
+      "subject_numeric_id": 241
+    },
+    {
+      "file": "242.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "0c473bc76193b92bbcbdba7ccc41281d437c8aa1129f365ee3edc49c05728f9e",
+      "size_bytes": 37638,
+      "subject_id": "242",
+      "subject_numeric_id": 242
+    },
+    {
+      "file": "244.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "98865964fe0f5867c699fc022785446dd38ccc12169c68a03dab38cfe1eec2c7",
+      "size_bytes": 44420,
+      "subject_id": "244",
+      "subject_numeric_id": 244
+    },
+    {
+      "file": "245.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "b1a569ffe616cfe694a95fb9a066b43b88207047221c143e37b975ffa3077de3",
+      "size_bytes": 46076,
+      "subject_id": "245",
+      "subject_numeric_id": 245
+    },
+    {
+      "file": "246.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "5c738206a7911971765cc140a56a53c15ffa56979e00b605046075f7e3ac0eb0",
+      "size_bytes": 51541,
+      "subject_id": "246",
+      "subject_numeric_id": 246
+    },
+    {
+      "file": "247.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "349f99d1fcf716bb4c34af3c755e5e58ac430d3782c907aa054bd93ede1b05e9",
+      "size_bytes": 52865,
+      "subject_id": "247",
+      "subject_numeric_id": 247
+    },
+    {
+      "file": "248.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "5fdc7459a2e952899a57406ad2a025ca60b64e812041c2214c97396e67895ab7",
+      "size_bytes": 38984,
+      "subject_id": "248",
+      "subject_numeric_id": 248
+    },
+    {
+      "file": "249.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "1268e25f608d34ed9362ce9bcef8b2eea43c322ffd18c0f695dd3557418fe5dd",
+      "size_bytes": 49515,
+      "subject_id": "249",
+      "subject_numeric_id": 249
+    },
+    {
+      "file": "250.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "f7d1f21eed8d72e1adbb80db7ba5150badc83be3399d12abcd85eb60f564c5b7",
+      "size_bytes": 40135,
+      "subject_id": "250",
+      "subject_numeric_id": 250
+    },
+    {
+      "file": "251.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "ee08dad6dd39831f8362995c47514c3e8108d26b7cf68759afa83dd2ce0ae527",
+      "size_bytes": 34864,
+      "subject_id": "251",
+      "subject_numeric_id": 251
+    },
+    {
+      "file": "252.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "fb6634c0642d623f3c31a44e80d0ec901e9ffcc8bc80a6a81c70bc791330f33f",
+      "size_bytes": 53561,
+      "subject_id": "252",
+      "subject_numeric_id": 252
+    },
+    {
+      "file": "253.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "f04c5809b615646f54169e9b5737746aceb96cabf22269707fb6741eb3ddbc98",
+      "size_bytes": 46763,
+      "subject_id": "253",
+      "subject_numeric_id": 253
+    },
+    {
+      "file": "254.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "116552f1e42c08ad9098ba8997d96b90f31204532d89231d86f3a861fed5ff4c",
+      "size_bytes": 44920,
+      "subject_id": "254",
+      "subject_numeric_id": 254
+    },
+    {
+      "file": "255.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "6f43c3d0683d2d2e270b10d5ba2c2f4ee483d84818de648279707fa3ef7d3bce",
+      "size_bytes": 46288,
+      "subject_id": "255",
+      "subject_numeric_id": 255
+    },
+    {
+      "file": "256.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "c508d855fc88f10301e8225f391285c425d2127a96f1370f20dbfe5b60d83afa",
+      "size_bytes": 62862,
+      "subject_id": "256",
+      "subject_numeric_id": 256
+    },
+    {
+      "file": "258.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "056608ca7b0b896c2e3219669a5d10f28bd06deb2c3eedd6263cb84d5b42e69f",
+      "size_bytes": 49393,
+      "subject_id": "258",
+      "subject_numeric_id": 258
+    },
+    {
+      "file": "259.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "b7c2e9aff58d88ff2c671aa338d9fc53e4cf0313aad3750bcc71d8e0a582a0bd",
+      "size_bytes": 36223,
+      "subject_id": "259",
+      "subject_numeric_id": 259
+    },
+    {
+      "file": "261.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "a8e02cf4e8271e5899a636b0946272b879401e7247589c92a552c884bdcff3ac",
+      "size_bytes": 53232,
+      "subject_id": "261",
+      "subject_numeric_id": 261
+    },
+    {
+      "file": "262.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "5bd5f581438525cc49076ba4920b9aa60e60561f2d98d7d6bfe5c9f49579cb76",
+      "size_bytes": 49296,
+      "subject_id": "262",
+      "subject_numeric_id": 262
+    },
+    {
+      "file": "264.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "f2447afd3bffb8dcc363a81a308606b3440212c17ba74df673d9ccc909da0e1c",
+      "size_bytes": 48320,
+      "subject_id": "264",
+      "subject_numeric_id": 264
+    },
+    {
+      "file": "265.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "69d8fd75cbfe94ae727c6798f641be225118e01fa2217ab3e7fe32f9ab9ff611",
+      "size_bytes": 30595,
+      "subject_id": "265",
+      "subject_numeric_id": 265
+    },
+    {
+      "file": "266.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "e42e775061b2450fc1658b72b854fe4bc0ddd99b8a9ab85700965c75ce5c9e42",
+      "size_bytes": 48354,
+      "subject_id": "266",
+      "subject_numeric_id": 266
+    },
+    {
+      "file": "267.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "172e7c2324162e2febb3761e2f58ba97338739497be69219a5e5c03a9d7b4ae1",
+      "size_bytes": 43490,
+      "subject_id": "267",
+      "subject_numeric_id": 267
+    },
+    {
+      "file": "268.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "052f1a1ad6f87a41db6cf9671a39951643b6c390d9f3f1e7482863762ffb8faf",
+      "size_bytes": 42235,
+      "subject_id": "268",
+      "subject_numeric_id": 268
+    },
+    {
+      "file": "269.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "a57ae25544eda218a69698c688857a9141be0ed55fbe1d92880d7faa87d8789e",
+      "size_bytes": 39663,
+      "subject_id": "269",
+      "subject_numeric_id": 269
+    },
+    {
+      "file": "270.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "1cb62b84618ba594ca42c0832f5fa583f0de5c209b4e4aa1c062b80e479a5679",
+      "size_bytes": 51462,
+      "subject_id": "270",
+      "subject_numeric_id": 270
+    },
+    {
+      "file": "271.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "4ad2ed6c4b47bccce333710afd96288b65bb9944ece62585e023d7ec34b82288",
+      "size_bytes": 47179,
+      "subject_id": "271",
+      "subject_numeric_id": 271
+    },
+    {
+      "file": "273.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "ab1ffab97459e71258d8ec965feb530a4736733811a5fc71bdc10a43d862733d",
+      "size_bytes": 51039,
+      "subject_id": "273",
+      "subject_numeric_id": 273
+    },
+    {
+      "file": "274.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "857d3d565677846b5619fcbd033bf12e979ba370b5ff6eeabad40cb7272f6e37",
+      "size_bytes": 40751,
+      "subject_id": "274",
+      "subject_numeric_id": 274
+    },
+    {
+      "file": "275.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "5beba1fe7305e39b397b34620986a7d5633252e2640b7bbe1aec17d0de9bdfb2",
+      "size_bytes": 55333,
+      "subject_id": "275",
+      "subject_numeric_id": 275
+    },
+    {
+      "file": "276.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "972521cd276b79aba12e0c8ef881995d76076ddc031c4ed015a16b999e4d6028",
+      "size_bytes": 56383,
+      "subject_id": "276",
+      "subject_numeric_id": 276
+    },
+    {
+      "file": "278.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "3f09b179c357154079b13322daec537922f2d9d632e126cc23601a8e36f064d7",
+      "size_bytes": 39708,
+      "subject_id": "278",
+      "subject_numeric_id": 278
+    },
+    {
+      "file": "279.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "be3571ad1b09b80dd18a2e7dc17159b58d3f8242870afb57639f99f8b3f75794",
+      "size_bytes": 52303,
+      "subject_id": "279",
+      "subject_numeric_id": 279
+    },
+    {
+      "file": "281.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "dcebb09d702f27c06f588b1843e6c59de077efbbf953af6d106d072ec5cafbea",
+      "size_bytes": 58998,
+      "subject_id": "281",
+      "subject_numeric_id": 281
+    },
+    {
+      "file": "282.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "d0f1dd4854247a7df7cc5d2e05b36d48f6af0e60565c7d883e623e84ded9cdc5",
+      "size_bytes": 47215,
+      "subject_id": "282",
+      "subject_numeric_id": 282
+    },
+    {
+      "file": "283.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "53bf83a98de09ad4d1cef61c51e5520edf89ff1f96ec879ff1780e5d7ab670fb",
+      "size_bytes": 48535,
+      "subject_id": "283",
+      "subject_numeric_id": 283
+    },
+    {
+      "file": "284.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "1d209e5ae44ab5f2c44f8b48a47f2fe9f477f6c771c47604afbfd5a371e3077c",
+      "size_bytes": 50043,
+      "subject_id": "284",
+      "subject_numeric_id": 284
+    },
+    {
+      "file": "285.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "f7fe984968594864c17e9b22c317570ba4e4021fada0c0b2f951a07ed8a99ca8",
+      "size_bytes": 39206,
+      "subject_id": "285",
+      "subject_numeric_id": 285
+    },
+    {
+      "file": "287.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "4a9b041abe786725bc6d5a3e39bd0b049bb241c6d59cf2df8409a5520d9519f7",
+      "size_bytes": 41398,
+      "subject_id": "287",
+      "subject_numeric_id": 287
+    },
+    {
+      "file": "290.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "7e48ee055081df1ab2a05fc356308a80cfec7cf7b2d6a20d5d14d09e5875d723",
+      "size_bytes": 45440,
+      "subject_id": "290",
+      "subject_numeric_id": 290
+    },
+    {
+      "file": "291.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "baca2adbf8be98ba4323b85337dc8673a40281e078d48ba7075c7166e7902a95",
+      "size_bytes": 37841,
+      "subject_id": "291",
+      "subject_numeric_id": 291
+    },
+    {
+      "file": "292.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "eb9314fd5960d51df7d5c524d1ba320bd0e5f74f50276ba084f71c34de803ff9",
+      "size_bytes": 46111,
+      "subject_id": "292",
+      "subject_numeric_id": 292
+    },
+    {
+      "file": "293.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "2a548052052fdf31af6d52be4a0e5aeab794428bc07b3c42b3dbfb3f310a783c",
+      "size_bytes": 50329,
+      "subject_id": "293",
+      "subject_numeric_id": 293
+    },
+    {
+      "file": "297.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "6c5b1b5de3357f605cf90526165d59f8ab1c23653599062be838b28af33bdf16",
+      "size_bytes": 49897,
+      "subject_id": "297",
+      "subject_numeric_id": 297
+    },
+    {
+      "file": "298.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "3f142f08506091f7949c6c72da57c3b5d713e9551d78569b0b9bd4d9ecbbabe9",
+      "size_bytes": 51692,
+      "subject_id": "298",
+      "subject_numeric_id": 298
+    },
+    {
+      "file": "299.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "754a865125b93953c84498aac09e5a60f243b367fd0a81a0cc92d3572b742f5f",
+      "size_bytes": 54561,
+      "subject_id": "299",
+      "subject_numeric_id": 299
+    },
+    {
+      "file": "301.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "edfbbdf43f277015b59d18b6fdcc13499187a5d30425b805d0bd3a243be50d77",
+      "size_bytes": 35196,
+      "subject_id": "301",
+      "subject_numeric_id": 301
+    },
+    {
+      "file": "302.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "3427ca451de8de9b050423f307e61e11fd27e3eaa3b5d04258f77a2967039883",
+      "size_bytes": 44434,
+      "subject_id": "302",
+      "subject_numeric_id": 302
+    },
+    {
+      "file": "303.xlsx",
+      "group": "SZ",
+      "label": 1,
+      "sha256": "b24bc707dbb22bd733986ed16b582171292ba54772925b36abd67d5f9a663f1c",
+      "size_bytes": 48318,
+      "subject_id": "303",
+      "subject_numeric_id": 303
+    }
+  ]
+}

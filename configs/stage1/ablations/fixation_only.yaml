@@ -1,0 +1,7 @@
+# Ablation: fixation_only — use only channel 0 (fixation density).
+_comment: "Do transitions and temporal order add value?"
+model:
+  input_channels: 1
+  active_channels: [0]
+loss:
+  channel_weights: [1.0]

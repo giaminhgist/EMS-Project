@@ -1,0 +1,4 @@
+# Ablation: avgpool_semantic_adapter — fixed 2x2 pooling + 1x1 projection.
+_comment: "Does learned spatial aggregation help?"
+model:
+  semantic_adapter: avgpool_2x2

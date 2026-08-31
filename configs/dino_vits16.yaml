@@ -1,0 +1,39 @@
+# Frozen DINO feature extraction configuration (Phase 3)
+# Decision 2 (Phase 0): pretrained DINO ViT-S/16, frozen, CPU inference.
+
+model_family: dino
+model_name: dino_vits16
+hub_source: facebookresearch/dino:main
+pretrained: true
+frozen: true
+
+input_height: 384
+input_width: 512
+resize_mode: exact
+interpolation: bicubic
+antialias: true
+center_crop: false
+random_augmentation: false
+
+output_layer: final_normalized_patch_tokens
+include_cls_token: false
+output_dtype: float32
+
+# Official ImageNet normalization expected by the DINO checkpoint.
+normalization_mean: [0.485, 0.456, 0.406]
+normalization_std: [0.229, 0.224, 0.225]
+
+# Contract expectations, asserted at extraction time.
+expected_patch_size: 16
+expected_patch_grid: [24, 32]
+expected_token_dim: 384
+
+batch_size: 1
+num_workers: 4
+device: cpu
+seed: 2026
+
+image_manifest: /root/EMS-Project/processed_dataset/image_manifest.csv
+image_source_root: /root/EMS-Project/original_dataset/EMS/Images
+output_root: /root/EMS-Project/stimulus_features
+output_subdir: dino_vits16

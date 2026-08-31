@@ -1,0 +1,4 @@
+# Ablation: full_reconstruction — no token mask; reconstruct the full map.
+_comment: "Does masking force better semantic usage?"
+masking:
+  reconstruction_scope: full

@@ -1,0 +1,4 @@
+# Ablation: concat_fusion — position-aligned concatenation/projection.
+_comment: "Is attention necessary beyond learned dense fusion?"
+model:
+  fusion: concat

@@ -1,0 +1,4 @@
+# Ablation: fixed_fusion_gates — fix gamma_1=gamma_2=0.05 and eta=0.1.
+_comment: "Does learning the three residual gates help beyond their initial scales?"
+model:
+  learn_fusion_gates: false

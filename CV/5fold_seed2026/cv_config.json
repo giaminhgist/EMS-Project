@@ -1,0 +1,12 @@
+{
+  "config_hash": "0bdc488a8d0e0da32d85c06d61ad7b214ce36cea8a1a77bc6155421903f42196",
+  "group_column": "subject_id",
+  "n_splits": 5,
+  "output_root": "/root/EMS-Project/CV",
+  "random_state": 2026,
+  "shuffle": true,
+  "source_inventory": "/root/EMS-Project/processed_dataset/source_inventory.json",
+  "stratify_column": "label",
+  "subject_manifest": "/root/EMS-Project/processed_dataset/subject_manifest.csv",
+  "trial_manifest": "/root/EMS-Project/processed_dataset/trial_manifest.parquet"
+}

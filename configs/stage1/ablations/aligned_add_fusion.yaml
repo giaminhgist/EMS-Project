@@ -1,0 +1,4 @@
+# Ablation: aligned_add_fusion — aligned additions instead of both attentions.
+_comment: "Is dynamic cross-attention better than position-aligned addition?"
+model:
+  fusion: aligned_add
