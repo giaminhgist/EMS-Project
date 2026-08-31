@@ -32,6 +32,7 @@ from .sampler import StimulusGroupedHCBatchSampler
 from .validation import (
     best_checkpoint_eligible,
     effective_lambda_norm,
+    effective_lambda_spread,
     run_validation,
 )
 
@@ -142,6 +143,7 @@ def train_one_epoch(
     model.train()
     sampler.set_epoch(epoch)
     lambda_norm = effective_lambda_norm(cfg, epoch)
+    lambda_spread = effective_lambda_spread(cfg, epoch)
     amp_enabled = scaler is not None
     autocast = _autocast_context(device, amp_enabled)
 
@@ -149,6 +151,7 @@ def train_one_epoch(
     recon_loss = 0.0
     recon_ch = np.zeros(3)
     norm_loss = 0.0
+    spread_loss = 0.0
     within_disp = 0.0
     between_disp = 0.0
     n_trials = 0
@@ -179,6 +182,8 @@ def train_one_epoch(
                 out.reconstruction, batch.heatmaps, mask,
                 out.trial_embedding, batch.trial_to_stimulus_slot,
                 lambda_norm=lambda_norm,
+                lambda_spread=lambda_spread,
+                spread_floor=cfg.loss.spread_floor,
                 reconstruction_loss=cfg.loss.reconstruction,
                 channel_weights=tuple(cfg.loss.channel_weights),
                 channel_map=tuple(cfg.model.active_channels),
@@ -239,6 +244,7 @@ def train_one_epoch(
         recon_ch[1] += float(losses.recon_transition.item()) * n
         recon_ch[2] += float(losses.recon_temporal.item()) * n
         norm_loss += float(losses.normative.item()) * n
+        spread_loss += float(losses.spread_loss.item()) * n
         within_disp += losses.within_stimulus_dispersion * n
         between_disp += losses.between_stimulus_dispersion * n
         n_skipped += losses.n_skipped_norm_groups
@@ -256,6 +262,7 @@ def train_one_epoch(
         "train_recon_transition": recon_ch[1] / n_trials,
         "train_recon_temporal": recon_ch[2] / n_trials,
         "train_norm_loss": norm_loss / n_trials,
+        "train_spread_loss": spread_loss / n_trials,
         "train_within_stimulus_dispersion": within_disp / n_trials,
         "train_between_stimulus_dispersion": between_disp / n_trials,
         "num_train_trials": n_trials,
@@ -470,10 +477,13 @@ def run_training(
         write_history(fold_dir / "history.csv", history_rows)
 
         logger.info(
-            "epoch %d/%d phase=%s loss=%.4f (recon %.4f, norm %.4f) val=%.4f (recon %.4f, norm %.4f) lr=%.2e%s",
+            "epoch %d/%d phase=%s loss=%.4f (recon %.4f, norm %.4f, spread %.4f) "
+            "val=%.4f (recon %.4f, norm %.4f, spread %.4f) lr=%.2e%s",
             epoch, total_epochs - 1, training_phase,
-            train_metrics["train_loss"], train_metrics["train_recon_loss"], train_metrics["train_norm_loss"],
-            val_metrics["val_loss"], val_metrics["val_recon_loss"], val_metrics["val_norm_loss"],
+            train_metrics["train_loss"], train_metrics["train_recon_loss"],
+            train_metrics["train_norm_loss"], train_metrics["train_spread_loss"],
+            val_metrics["val_loss"], val_metrics["val_recon_loss"],
+            val_metrics["val_norm_loss"], val_metrics["val_spread_loss"],
             optimizer.param_groups[0]["lr"],
             "  [BEST]" if is_best else "",
         )

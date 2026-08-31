@@ -126,6 +126,8 @@ class LossConfig:
     lambda_norm: float = 0.1
     norm_start_epoch: int = 10
     norm_ramp_epochs: int = 5
+    spread_floor: float = 0.1  # min between-centroid cosine dispersion (cosine sim <= 1 - floor)
+    lambda_spread: float = 5.0
 
     def __post_init__(self) -> None:
         object.__setattr__(self, "channel_weights", tuple(self.channel_weights))
@@ -148,6 +150,8 @@ class LossConfig:
             raise ConfigError(f"{where}: only loo_cosine normative metric is supported")
         if self.lambda_norm < 0 or self.norm_start_epoch < 0 or self.norm_ramp_epochs < 0:
             raise ConfigError(f"{where}: lambda_norm / norm_* epochs must be non-negative")
+        if self.lambda_spread < 0 or not 0.0 <= self.spread_floor <= 1.0:
+            raise ConfigError(f"{where}: lambda_spread must be non-negative and spread_floor in [0, 1]")
 
 
 @dataclass(frozen=True)

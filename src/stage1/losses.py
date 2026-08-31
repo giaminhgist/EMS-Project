@@ -80,12 +80,19 @@ def loo_cosine_normative_loss(
     *,
     min_hc_per_stimulus: int = 2,
     return_dispersion: bool = True,
+    spread_floor: float = 0.1,
 ) -> dict[str, Any]:
     """Leave-one-HC-out cosine consistency within each stimulus group.
 
     ``mu_{-h,s}`` is the centroid of the other trials of the same stimulus,
     stop-gradiented. Groups with fewer than ``min_hc_per_stimulus`` trials are
     skipped and counted (never mixed across stimuli).
+
+    Also returns ``spread_loss``: a hinge over between-centroid cosine
+    dispersion (``max(0, spread_floor - (1 - cos(c_i, c_j)))^2`` over stimulus
+    centroid pairs, 0 when fewer than 2 centroids). Centroid gradients are
+    NOT detached here — this term is the anti-collapse repulsion between
+    stimuli (approved contract amendment, 2026-08-31).
     """
     n = embeddings.shape[0]
     if n == 0:
@@ -134,11 +141,17 @@ def loo_cosine_normative_loss(
         sim = c_norm @ c_norm.T
         off = ~torch.eye(len(c), dtype=torch.bool, device=c.device)
         between = (1.0 - sim[off]).mean()
+        # Hinge on between-centroid dispersion: active only while centroids
+        # are closer than the floor (cosine sim above 1 - spread_floor).
+        violation = torch.clamp_min(spread_floor - (1.0 - sim[off]), 0.0)
+        spread = (violation ** 2).mean()
     else:
         between = embeddings.sum() * 0.0
+        spread = embeddings.sum() * 0.0
 
     return {
         "loss": loss,
+        "spread_loss": spread,
         "within_dispersion": float(within.item()) if torch.is_tensor(within) else float(within),
         "between_dispersion": float(between.item()) if torch.is_tensor(between) else float(between),
         "n_skipped_groups": int(n_skipped),
@@ -154,6 +167,8 @@ def stage1_loss(
     stimulus_slot: torch.Tensor,
     *,
     lambda_norm: float,
+    lambda_spread: float = 0.0,
+    spread_floor: float = 0.1,
     reconstruction_loss: str = "smooth_l1",
     channel_weights: tuple[float, ...] = (1.0, 1.0, 1.0),
     channel_map: tuple[int, ...] = (0, 1, 2),
@@ -170,9 +185,12 @@ def stage1_loss(
         channel_map=channel_map,
     )
     norm = loo_cosine_normative_loss(
-        embeddings, stimulus_slot, min_hc_per_stimulus=min_hc_per_stimulus
+        embeddings,
+        stimulus_slot,
+        min_hc_per_stimulus=min_hc_per_stimulus,
+        spread_floor=spread_floor,
     )
-    total = recon["total"] + lambda_norm * norm["loss"]
+    total = recon["total"] + lambda_norm * norm["loss"] + lambda_spread * norm["spread_loss"]
     return Stage1Losses(
         total=total,
         reconstruction=recon["total"],
@@ -180,9 +198,11 @@ def stage1_loss(
         recon_transition=recon["transition"],
         recon_temporal=recon["temporal"],
         normative=norm["loss"],
+        spread_loss=norm["spread_loss"],
         within_stimulus_dispersion=norm["within_dispersion"],
         between_stimulus_dispersion=norm["between_dispersion"],
         n_skipped_norm_groups=norm["n_skipped_groups"],
         lambda_norm=lambda_norm,
+        lambda_spread=lambda_spread,
         details={"n_masked_pixels": recon["n_masked_pixels"], "n_norm_groups": norm["n_groups"]},
     )

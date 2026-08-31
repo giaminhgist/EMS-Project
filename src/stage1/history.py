@@ -17,8 +17,9 @@ HISTORY_COLUMNS: list[str] = [
     "best_epoch_so_far", "learning_rate", "learning_rate_min", "learning_rate_max",
     "weight_decay", "lambda_norm", "train_loss", "train_recon_loss",
     "train_recon_fixation", "train_recon_transition", "train_recon_temporal",
-    "train_norm_loss", "val_loss", "val_recon_loss", "val_recon_fixation",
-    "val_recon_transition", "val_recon_temporal", "val_norm_loss",
+    "train_norm_loss", "train_spread_loss", "val_loss", "val_recon_loss",
+    "val_recon_fixation", "val_recon_transition", "val_recon_temporal",
+    "val_norm_loss", "val_spread_loss",
     "train_within_stimulus_dispersion", "train_between_stimulus_dispersion",
     "val_within_stimulus_dispersion", "val_between_stimulus_dispersion",
     "grad_norm_mean", "grad_norm_max", "grad_clip_fraction",
@@ -132,6 +133,7 @@ def row_from_metrics(
         row[f"{prefix}_recon_transition"] = metrics.get(f"{prefix}_recon_transition")
         row[f"{prefix}_recon_temporal"] = metrics.get(f"{prefix}_recon_temporal")
         row[f"{prefix}_norm_loss"] = metrics.get(f"{prefix}_norm_loss")
+        row[f"{prefix}_spread_loss"] = metrics.get(f"{prefix}_spread_loss")
         row[f"{prefix}_within_stimulus_dispersion"] = metrics.get(f"{prefix}_within_stimulus_dispersion")
         row[f"{prefix}_between_stimulus_dispersion"] = metrics.get(f"{prefix}_between_stimulus_dispersion")
     row["semantic_gamma_attention1"] = extra.get("semantic_gamma_attention1")

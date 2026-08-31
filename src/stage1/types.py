@@ -70,8 +70,10 @@ class Stage1Losses:
     recon_transition: torch.Tensor
     recon_temporal: torch.Tensor
     normative: torch.Tensor
+    spread_loss: torch.Tensor
     within_stimulus_dispersion: float
     between_stimulus_dispersion: float
     n_skipped_norm_groups: int
     lambda_norm: float
+    lambda_spread: float = 0.0
     details: dict[str, Any] = field(default_factory=dict)

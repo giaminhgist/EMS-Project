@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import numpy as np
 import pandas as pd
 import pytest
 
@@ -50,6 +51,26 @@ def test_every_completed_epoch_exactly_one_row(stage1_cfg_dict):
     assert [int(r["epoch"]) for r in rows] == [0, 1, 2]
     history_df = pd.read_csv(outcome.run_dir / "fold_0" / "history.csv")
     assert list(history_df.columns) == HISTORY_COLUMNS
+
+
+def test_spread_loss_committed_and_val_loss_composition(stage1_cfg_dict):
+    """Smoke run: spread columns exist, are finite, and val_loss recomposes."""
+    cfg = _smoke_cfg(stage1_cfg_dict)  # norm_start=1, ramp=1 -> spread active from epoch 1
+    from stage1.validation import effective_lambda_norm, effective_lambda_spread
+
+    outcome = run_training(cfg, device="cpu", limits=TrainLimits(max_epochs=3, run_name="spread"))
+    history = pd.read_csv(outcome.run_dir / "fold_0" / "history.csv")
+    assert {"train_spread_loss", "val_spread_loss"} <= set(history.columns)
+    for _, row in history.iterrows():
+        assert np.isfinite(row.train_spread_loss)
+        assert np.isfinite(row.val_spread_loss)
+        epoch = int(row.epoch)
+        expected_val = (
+            row.val_recon_loss
+            + effective_lambda_norm(cfg, epoch) * row.val_norm_loss
+            + effective_lambda_spread(cfg, epoch) * row.val_spread_loss
+        )
+        assert row.val_loss == pytest.approx(expected_val, abs=1e-5)
 
 
 def test_history_validates_uniqueness_and_monotonicity(tmp_path):

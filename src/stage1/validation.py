@@ -49,6 +49,7 @@ def run_validation(
     val_batch_size = cfg.sampler.stimuli_per_batch * cfg.sampler.hc_per_stimulus
     ratio = cfg.masking.validation_mask_ratio
     lambda_norm = effective_lambda_norm(cfg, epoch)
+    lambda_spread = effective_lambda_spread(cfg, epoch)
 
     all_uids = dataset.trial_uids()
     fixed_masks = validation_token_masks(all_uids, ratio, cfg.seed, cfg.fold)
@@ -78,6 +79,8 @@ def run_validation(
                 out.reconstruction, batch.heatmaps, mask,
                 out.trial_embedding, batch.trial_to_stimulus_slot,
                 lambda_norm=lambda_norm,
+                lambda_spread=lambda_spread,
+                spread_floor=cfg.loss.spread_floor,
                 reconstruction_loss=cfg.loss.reconstruction,
                 channel_weights=tuple(cfg.loss.channel_weights),
                 channel_map=tuple(cfg.model.active_channels),
@@ -109,8 +112,15 @@ def run_validation(
 
     emb_tensor = torch.from_numpy(embeddings)
     slot_tensor = torch.tensor(stimulus_list, dtype=torch.int64)
-    norm = loo_cosine_normative_loss(emb_tensor, slot_tensor, min_hc_per_stimulus=2)
-    val_loss = recon_total + lambda_norm * float(norm["loss"].item())
+    norm = loo_cosine_normative_loss(
+        emb_tensor, slot_tensor, min_hc_per_stimulus=2,
+        spread_floor=cfg.loss.spread_floor,
+    )
+    val_loss = (
+        recon_total
+        + lambda_norm * float(norm["loss"].item())
+        + lambda_spread * float(norm["spread_loss"].item())
+    )
 
     # Diagnostics on the fixed subset (never updates weights).
     diagnostics: dict[str, Any] = {
@@ -175,6 +185,7 @@ def run_validation(
         "val_recon_transition": float(recon_per_channel[1]),
         "val_recon_temporal": float(recon_per_channel[2]),
         "val_norm_loss": float(norm["loss"].item()),
+        "val_spread_loss": float(norm["spread_loss"].item()),
         "val_within_stimulus_dispersion": norm["within_dispersion"],
         "val_between_stimulus_dispersion": norm["between_dispersion"],
         "n_val_batches": n_batches,
@@ -193,17 +204,27 @@ def run_validation(
     )
 
 
-def effective_lambda_norm(cfg: Any, epoch: int) -> float:
-    """Phase A (warm-up, lambda=0) -> Phase B (linear ramp) -> Phase C (full)."""
-    base = cfg.loss.lambda_norm
+def _ramp_progress(cfg: Any, epoch: int) -> tuple[float, bool]:
+    """(progress, active) for the normative lambda ramp; inactive before start."""
     start = cfg.loss.norm_start_epoch
     ramp = cfg.loss.norm_ramp_epochs
     if epoch < start:
-        return 0.0
+        return 0.0, False
     if ramp <= 0:
-        return base
-    progress = min(1.0, (epoch - start + 1) / ramp)
-    return base * progress
+        return 1.0, True
+    return min(1.0, (epoch - start + 1) / ramp), True
+
+
+def effective_lambda_norm(cfg: Any, epoch: int) -> float:
+    """Phase A (warm-up, lambda=0) -> Phase B (linear ramp) -> Phase C (full)."""
+    progress, active = _ramp_progress(cfg, epoch)
+    return cfg.loss.lambda_norm * progress if active else 0.0
+
+
+def effective_lambda_spread(cfg: Any, epoch: int) -> float:
+    """Spread-floor lambda shares the normative ramp schedule."""
+    progress, active = _ramp_progress(cfg, epoch)
+    return cfg.loss.lambda_spread * progress if active else 0.0
 
 
 def best_checkpoint_eligible(cfg: Any, epoch: int) -> bool:

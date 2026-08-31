@@ -111,3 +111,42 @@ def test_forward_backward_finite_synthetic(stage1_cfg_dict):
     for p in model.parameters():
         if p.requires_grad:
             assert p.grad is not None and torch.all(torch.isfinite(p.grad))
+
+
+def test_spread_term_gradient_reaches_semantic_adapter(stage1_cfg_dict):
+    """With near-collapsed stimuli the spread hinge alone must backprop into
+    the semantic adapter — the site of the observed collapse-to-mean."""
+    torch.manual_seed(3)
+    cfg = Stage1Config.from_dict(stage1_cfg_dict)
+    model = Stage1Model(cfg)
+    model.train()
+    # Two stimuli sharing the same DINO tokens up to a tiny constant shift,
+    # and identical heatmaps: embeddings stay near-parallel so the spread
+    # hinge is active, and only the adapter can separate the two centroids.
+    base_tokens = torch.randn(768, 384)
+    batch = Stage1Batch(
+        heatmaps=torch.randn(4, 3, 48, 64).repeat(1, 1, 1, 1),
+        unique_dino_tokens=torch.stack([base_tokens, base_tokens + 1e-3]),
+        trial_to_stimulus_slot=torch.tensor([0, 1, 0, 1]),
+        stimulus_indices=torch.arange(2),
+        subject_ids=["000", "005", "000", "005"],
+        stimulus_ids=["a1.jpg", "b1.jpg", "a1.jpg", "b1.jpg"],
+        trial_uids=[f"u{i}" for i in range(4)],
+        groups=["HC"] * 4,
+    )
+    token_mask = torch.zeros(4, 192, dtype=torch.bool)
+    token_mask[:, :67] = True
+    out = model(batch, token_mask)
+    loss = stage1_loss(
+        out.reconstruction, batch.heatmaps, token_mask,
+        out.trial_embedding, batch.trial_to_stimulus_slot,
+        lambda_norm=0.0, lambda_spread=1.0, spread_floor=0.1,
+        min_hc_per_stimulus=2,
+    )
+    assert loss.spread_loss.item() > 0  # hinge active on the collapsed setup
+    loss.total.backward()
+    assert torch.isfinite(loss.total)
+    for pname, p in model.semantic_adapter.named_parameters():
+        if p.requires_grad:
+            assert p.grad is not None, f"semantic_adapter.{pname} has no spread gradient"
+            assert torch.all(torch.isfinite(p.grad)), f"semantic_adapter.{pname} gradient non-finite"

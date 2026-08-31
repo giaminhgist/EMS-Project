@@ -398,8 +398,29 @@ Total loss:
 
 \[
 \mathcal{L}_{stage1}=\mathcal{L}_{rec}
-+\lambda_N\mathcal{L}_{HC-norm}.
++\lambda_N\mathcal{L}_{HC-norm}
++\lambda_{spread}\mathcal{L}_{spread}.
 \]
+
+*Approved amendment (2026-08-31): between-stimulus dispersion floor.* In the
+base configuration the attraction-only LOO loss lets all stimulus centroids
+collapse to a shared direction (observed on the 2026-08-31 fold-0 run: all
+100 stimulus centroids at pairwise cosine similarity ≈ 0.9998, between-stimulus
+dispersion ≈ 0.0002). To prevent this, add a hinge over between-centroid
+cosine dispersion computed from the same normalized stimulus centroids:
+
+\[
+\mathcal{L}_{spread}=\frac{1}{|\{i\ne j\}|}\sum_{i\ne j}
+\max\left(0,\;d_{floor}-\left(1-\cos(c_i,c_j)\right)\right)^2,
+\]
+
+with `d_floor = 0.1` (centroid pairwise cosine similarity ≤ 0.9) and weight
+`λ_spread ≥ 0` (default 5.0; 0.5 proved too weak to reverse the collapse on
+the 2026-08-31 verification runs) ramped on the same schedule as `λ_N`. Groups
+with fewer than two centroids contribute 0. Centroid gradients are not
+stop-gradiented in this term. This is a cosine dispersion regularizer over
+stimulus centroids — no negative-pair sampling, no projection head, no
+diagnosis or SZ label — so the clause below still applies unchanged.
 
 No VICReg, InfoNCE, SupCon, diagnosis cross-entropy, or SZ label is allowed.
 

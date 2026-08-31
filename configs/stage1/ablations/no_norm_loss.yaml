@@ -1,4 +1,6 @@
-# Ablation: no_norm_loss — lambda_norm = 0.
+# Ablation: no_norm_loss — lambda_norm = 0 and lambda_spread = 0
+# (disables the whole normative block: LOO consistency + spread floor).
 _comment: "Does HC normative consistency improve the representation?"
 loss:
   lambda_norm: 0.0
+  lambda_spread: 0.0

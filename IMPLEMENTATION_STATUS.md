@@ -112,6 +112,18 @@ checkpoint semantics) are covered by the unit suites.
 9. **CV partition files include excluded-status trials as observed rows**;
    Stage 1 filters them at the dataset boundary (2 rows in fold 0's train
    partition).
+10. **Between-stimulus dispersion floor added to the Stage-1 normative
+    loss** (user-approved, 2026-08-31): `loo_cosine_normative_loss`
+    additionally returns `spread_loss = mean_{i≠j} max(0, d_floor −
+    (1 − cos(c_i, c_j)))²` over normalized stimulus centroids (0 when fewer
+    than 2 groups), weighted by `lambda_spread` (default 5.0; 0.5 too weak
+    on the verification runs) on the
+    `lambda_norm` ramp schedule. Total loss = recon + λ_N·norm +
+    λ_spread·spread. Motivated by collapse of all 100 centroids to pairwise
+    cosine similarity ≈ 0.9998 in the 2026-08-31 base run (`history.csv`,
+    `best_val_embeddings.npz`). Amends guide §10.2; the "No
+    VICReg/InfoNCE/SupCon" clause is unchanged — the hinge is a centroid
+    dispersion regularizer, not a contrastive objective.
 
 ## Unresolved limitations
 

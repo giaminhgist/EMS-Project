@@ -88,6 +88,90 @@ def test_stage1_loss_total_and_lambda():
     assert l0.lambda_norm == 0.0 and l1.lambda_norm == 0.5
 
 
+def test_stage1_loss_total_with_spread():
+    torch.manual_seed(0)
+    recon = torch.rand(4, 3, 48, 64)
+    target = torch.rand(4, 3, 48, 64)
+    mask = _token_mask(4)
+    emb = torch.randn(4, 128)
+    slots = torch.tensor([0, 0, 1, 1])
+    l = stage1_loss(recon, target, mask, emb, slots, lambda_norm=0.1, lambda_spread=0.5)
+    assert l.total.item() == pytest.approx(
+        l.reconstruction.item() + 0.1 * l.normative.item() + 0.5 * l.spread_loss.item()
+    )
+    assert l.lambda_spread == 0.5
+
+
+def test_lambda_spread_zero_reproduces_old_behavior():
+    torch.manual_seed(0)
+    recon = torch.rand(4, 3, 48, 64)
+    target = torch.rand(4, 3, 48, 64)
+    mask = _token_mask(4)
+    emb = torch.randn(4, 128)
+    slots = torch.tensor([0, 0, 1, 1])
+    l = stage1_loss(recon, target, mask, emb, slots, lambda_norm=0.5, lambda_spread=0.0)
+    assert l.total.item() == pytest.approx(l.reconstruction.item() + 0.5 * l.normative.item())
+
+
+def test_spread_zero_when_dispersion_above_floor():
+    # Two orthogonal centroids: between-dispersion far above the floor.
+    z = torch.tensor(
+        [
+            [1.0, 0.0, 0.0],
+            [1.0, 0.0, 0.0],
+            [0.0, 1.0, 0.0],
+            [0.0, 1.0, 0.0],
+        ]
+    )
+    slot = torch.tensor([0, 0, 1, 1])
+    out = loo_cosine_normative_loss(z, slot, min_hc_per_stimulus=2, spread_floor=0.1)
+    assert out["spread_loss"].item() == pytest.approx(0.0)
+    # Identical centroids sit at the floor: spread == floor^2.
+    z_col = torch.ones(4, 3)
+    out_col = loo_cosine_normative_loss(z_col, slot, min_hc_per_stimulus=2, spread_floor=0.1)
+    assert out_col["spread_loss"].item() == pytest.approx(0.1**2, abs=1e-6)
+
+
+def test_spread_hinge_magnitude():
+    # Centroid cosine sim 0.95 -> violation = 0.1 - 0.05 = 0.05.
+    c0 = torch.tensor([1.0, 0.0, 0.0])
+    v = torch.tensor([0.95, (1 - 0.95**2) ** 0.5, 0.0])
+    z = torch.stack([c0, c0, v, v])
+    slot = torch.tensor([0, 0, 1, 1])
+    out = loo_cosine_normative_loss(z, slot, min_hc_per_stimulus=2, spread_floor=0.1)
+    assert out["between_dispersion"] == pytest.approx(1 - 0.95, abs=1e-6)
+    assert out["spread_loss"].item() == pytest.approx((0.1 - 0.05) ** 2, abs=1e-6)
+
+
+def test_spread_singleton_guard():
+    z = torch.randn(4, 8)
+    slot = torch.tensor([0, 1, 2, 3])
+    out = loo_cosine_normative_loss(z, slot, min_hc_per_stimulus=2, spread_floor=0.1)
+    assert out["spread_loss"].item() == pytest.approx(0.0)
+
+
+def test_spread_gradient_separates_centroids():
+    torch.manual_seed(0)
+    # Two near-collapsed groups (tiny asymmetry so the cosine gradient is
+    # nonzero); optimizing the spread hinge alone must separate the centroids.
+    emb = torch.nn.Parameter(
+        torch.full((4, 16), 0.1) + 1e-3 * torch.randn(4, 16)
+    )
+    slot = torch.tensor([0, 0, 1, 1])
+    opt = torch.optim.Adam([emb], lr=0.1)
+    for _ in range(300):
+        opt.zero_grad()
+        out = loo_cosine_normative_loss(emb, slot, min_hc_per_stimulus=2, spread_floor=0.1)
+        out["spread_loss"].backward()
+        assert emb.grad is not None and torch.all(torch.isfinite(emb.grad))
+        opt.step()
+    final = loo_cosine_normative_loss(
+        emb.detach(), slot, min_hc_per_stimulus=2, spread_floor=0.1
+    )
+    assert final["between_dispersion"] >= 0.1 - 1e-3
+    assert final["spread_loss"].item() <= 1e-4
+
+
 def test_reconstruction_full_scope_ablation():
     torch.manual_seed(0)
     recon = torch.rand(2, 3, 48, 64)

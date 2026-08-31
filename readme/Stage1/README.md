@@ -18,9 +18,12 @@ viewers of the same stimulus (leave-one-out cosine consistency). **Stage 2
 
 Stage 1 trains exclusively on HC trials from the current outer fold; SZ rows
 are filtered out at the dataset boundary. The objective is masked
-reconstruction + leave-one-out cosine normative consistency. **No VICReg, no
-contrastive loss (InfoNCE/SupCon), no SZ classification loss, and no
-diagnostic classifier exist anywhere in this package.**
+reconstruction + leave-one-out cosine normative consistency, plus a
+between-stimulus dispersion-floor hinge on stimulus centroids (approved
+contract amendment, 2026-08-31) that prevents collapse-to-mean of the
+embedding. **No VICReg, no contrastive loss (InfoNCE/SupCon), no SZ
+classification loss, and no diagnostic classifier exist anywhere in this
+package.**
 
 ## 3. Input and artifact dependencies
 

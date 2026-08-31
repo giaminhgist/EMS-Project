@@ -26,6 +26,7 @@ def _smoke_cfg(stage1_cfg_dict, norm_start=1, ramp=1):
 
 def test_effective_lambda_schedule():
     from stage1.config import Stage1Config as C
+    from stage1.validation import effective_lambda_spread
 
     cfg = C.from_dict(
         {"loss": {"lambda_norm": 0.2, "norm_start_epoch": 10, "norm_ramp_epochs": 5}}
@@ -34,6 +35,11 @@ def test_effective_lambda_schedule():
     assert effective_lambda_norm(cfg, 10) == pytest.approx(0.04)  # 1/5 ramp
     assert effective_lambda_norm(cfg, 14) == pytest.approx(0.2)  # 5/5 ramp
     assert effective_lambda_norm(cfg, 20) == pytest.approx(0.2)
+    # Spread lambda (default 5.0) shares the same ramp schedule.
+    assert effective_lambda_spread(cfg, 9) == 0.0
+    assert effective_lambda_spread(cfg, 10) == pytest.approx(1.0)  # 5.0 * 1/5
+    assert effective_lambda_spread(cfg, 14) == pytest.approx(5.0)  # 5.0 * 5/5
+    assert effective_lambda_spread(cfg, 20) == pytest.approx(5.0)
     assert best_checkpoint_eligible(cfg, 14) is False
     assert best_checkpoint_eligible(cfg, 15) is True
 

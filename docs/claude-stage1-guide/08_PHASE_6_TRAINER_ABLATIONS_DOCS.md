@@ -217,12 +217,14 @@ train_recon_fixation
 train_recon_transition
 train_recon_temporal
 train_norm_loss
+train_spread_loss
 val_loss
 val_recon_loss
 val_recon_fixation
 val_recon_transition
 val_recon_temporal
 val_norm_loss
+val_spread_loss
 train_within_stimulus_dispersion
 train_between_stimulus_dispersion
 val_within_stimulus_dispersion

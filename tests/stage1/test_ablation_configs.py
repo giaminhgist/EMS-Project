@@ -104,6 +104,15 @@ def test_invalid_combinations_rejected():
         # channel weights must match input_channels for channel ablations.
         cfg = Stage1Config.load_base_with_ablation(BASE, "fixation_only")
         Stage1Config.from_dict({**cfg.to_dict(), "loss": {**cfg.loss.to_dict(), "channel_weights": [1.0, 1.0]}})
+    base_cfg = Stage1Config.load_base_with_ablation(BASE, None)
+    with pytest.raises(ConfigError, match="spread_floor"):
+        Stage1Config.from_dict(
+            {**base_cfg.to_dict(), "loss": {**base_cfg.loss.to_dict(), "spread_floor": 1.5}}
+        )
+    with pytest.raises(ConfigError, match="lambda_spread"):
+        Stage1Config.from_dict(
+            {**base_cfg.to_dict(), "loss": {**base_cfg.loss.to_dict(), "lambda_spread": -1.0}}
+        )
 
 
 def test_channel_ablations_use_declared_channels():

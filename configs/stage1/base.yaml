@@ -42,6 +42,8 @@ loss:
   lambda_norm: 0.1
   norm_start_epoch: 10
   norm_ramp_epochs: 5
+  spread_floor: 0.1
+  lambda_spread: 5.0
 
 sampler:
   stimuli_per_batch: 8
