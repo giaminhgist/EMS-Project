@@ -50,7 +50,7 @@ sampler:
   min_hc_per_stimulus: 8
 
 optimization:
-  epochs: 100
+  epochs: 200
   optimizer: adamw
   learning_rate: 3.0e-4
   weight_decay: 5.0e-4

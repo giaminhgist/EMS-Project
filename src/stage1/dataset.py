@@ -68,7 +68,7 @@ def verify_input_checksums(
             raise Stage1DataError(f"{fname} checksum mismatch vs CV metadata")
 
     # DINO artifacts: manifest consistent with image manifest; tokens present.
-    from stimulus_features.storage import FeaturePaths
+    from stimulus_extraction.storage import FeaturePaths
 
     paths = FeaturePaths.for_dir(dino_root)
     if not paths.patch_tokens.is_file():

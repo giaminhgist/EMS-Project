@@ -17,11 +17,11 @@ in this phase; it belongs to Stage 1 and must be fold-specific.
 ```text
 configs/dino_vits16.yaml
 extract_dino_features.py
-src/stimulus_features/__init__.py
-src/stimulus_features/config.py
-src/stimulus_features/dino_extractor.py
-src/stimulus_features/storage.py
-src/stimulus_features/validate.py
+src/stimulus_extraction/__init__.py
+src/stimulus_extraction/config.py
+src/stimulus_extraction/dino_extractor.py
+src/stimulus_extraction/storage.py
+src/stimulus_extraction/validate.py
 tests/stimulus_features/test_dino_preprocessing.py
 tests/stimulus_features/test_dino_token_shapes.py
 tests/stimulus_features/test_feature_id_mapping.py

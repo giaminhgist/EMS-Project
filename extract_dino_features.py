@@ -23,10 +23,10 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from stimulus_features.config import ConfigError, DINOExtractionConfig  # noqa: E402
-from stimulus_features.pipeline import ExtractionOptions, run_extraction  # noqa: E402
-from stimulus_features.storage import FeaturePaths, StorageError  # noqa: E402
-from stimulus_features.validate import verify_only  # noqa: E402
+from stimulus_extraction.config import ConfigError, DINOExtractionConfig  # noqa: E402
+from stimulus_extraction.pipeline import ExtractionOptions, run_extraction  # noqa: E402
+from stimulus_extraction.storage import FeaturePaths, StorageError  # noqa: E402
+from stimulus_extraction.validate import verify_only  # noqa: E402
 
 
 def build_parser() -> argparse.ArgumentParser:
