@@ -1,0 +1,10 @@
+{
+  "ablation": "base",
+  "cli_overrides": {},
+  "config_hash": "d1c8ce8316b15eb9c194fe6277af305b4aa6011407860c2153c3ff83e0035c1a",
+  "created_at_utc": "2026-09-01T05:17:05.256189+00:00",
+  "experiment_name": "dino_hc_normative_stage1",
+  "fold": 4,
+  "run_id": "dino_hc_normative_stage1_base_20260901_051705_151543_5",
+  "seed": 2026
+}
