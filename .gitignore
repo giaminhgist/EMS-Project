@@ -16,7 +16,7 @@ __pycache__/
 .env
 .claude/
 
-outputs/
+#outputs/
 
 stimulus_features/
 stimulus_features.zip
