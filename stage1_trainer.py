@@ -52,11 +52,23 @@ def build_parser() -> argparse.ArgumentParser:
     return parser
 
 
+def _with_fold(cfg: Stage1Config, fold: int) -> Stage1Config:
+    """Return ``cfg`` with ``fold`` set and ``paths.cv_fold_dir`` pointed at the
+    matching fold partition dir (base.yaml hardcodes fold_0)."""
+    updates: dict[str, object] = {"fold": fold}
+    if cfg.paths is not None and cfg.paths.cv_fold_dir is not None:
+        updates["paths"] = {
+            **cfg.paths.to_dict(),
+            "cv_fold_dir": str(cfg.paths.cv_fold_dir.parent / f"fold_{fold}"),
+        }
+    return Stage1Config(**{**cfg.to_dict(), **updates})
+
+
 def _load_cfg(args: argparse.Namespace) -> Stage1Config:
     base = REPO_ROOT / args.config
     cfg = Stage1Config.load_base_with_ablation(base, args.ablation)
     if args.fold is not None and args.fold != "all":
-        cfg = Stage1Config(**{**cfg.to_dict(), "fold": int(args.fold)})
+        cfg = _with_fold(cfg, int(args.fold))
     return cfg
 
 
@@ -84,7 +96,7 @@ def main(argv: list[str] | None = None) -> int:
         cfg = _load_cfg(args)
         folds = list(range(5)) if args.fold == "all" else [cfg.fold]
         for fold in folds:
-            fold_cfg = Stage1Config(**{**cfg.to_dict(), "fold": fold})
+            fold_cfg = _with_fold(cfg, fold)
             outcome = run_training(
                 fold_cfg,
                 device=args.device,

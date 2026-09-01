@@ -1,0 +1,15 @@
+{
+  "attention1_entropy": 2.352447748184204,
+  "attention2_entropy": 2.9688613414764404,
+  "attn_map_cosine_similarity": 0.6133570671081543,
+  "attn_map_js_divergence": 0.22201718389987946,
+  "best_epoch": 49,
+  "best_val_loss": 0.009630880299660007,
+  "per_dim_embedding_std_mean": 0.4312007427215576,
+  "residual_ratio_attention1": 0.03404926881194115,
+  "residual_ratio_bridge": 0.01450319029390812,
+  "semantic_gamma_attention1": 0.13786597549915314,
+  "semantic_gamma_attention2": 0.13637396693229675,
+  "shuffled_dino_recon_delta": 0.013382635079324245,
+  "spatial_bridge_eta": 0.17597696185112
+}

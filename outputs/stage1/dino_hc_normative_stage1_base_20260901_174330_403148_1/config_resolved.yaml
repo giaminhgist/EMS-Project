@@ -1,11 +1,7 @@
-# Stage-1 base configuration (Phase 6).
-# Recommended starting values are design defaults, not claimed optima.
-
 experiment_name: dino_hc_normative_stage1
 ablation: base
 seed: 2026
-fold: 0
-
+fold: 1
 model:
   d_model: 128
   heatmap_patch_size: 4
@@ -28,52 +24,51 @@ model:
   pooling: attention
   positional_encoding: fixed_2d_sincos
   input_channels: 3
-  active_channels: [0, 1, 2]
-
+  active_channels:
+  - 0
+  - 1
+  - 2
 masking:
   train_mask_ratio: 0.35
   validation_mask_ratio: 0.35
   reconstruction_scope: masked
-
 loss:
   reconstruction: smooth_l1
-  channel_weights: [1.0, 1.0, 1.0]
+  channel_weights:
+  - 1.0
+  - 1.0
+  - 1.0
   normative_metric: loo_cosine
   lambda_norm: 0.1
   norm_start_epoch: 10
   norm_ramp_epochs: 5
   spread_floor: 0.1
   lambda_spread: 5.0
-
 sampler:
   stimuli_per_batch: 8
   hc_per_stimulus: 8
   replacement: false
   min_hc_per_stimulus: 8
-
 optimization:
   epochs: 50
   optimizer: adamw
-  learning_rate: 3.0e-4
-  weight_decay: 5.0e-4
+  learning_rate: 0.0003
+  weight_decay: 0.0005
   scheduler: linear_warmup_cosine
   lr_warmup_epochs: 5
   gradient_clip_norm: 5.0
   amp: true
-
 validation:
   selection_metric: val_loss
   best_eligible_after_norm_ramp: true
   early_stopping_patience: 10
-
 runtime:
   num_workers: 0
   pin_memory: true
   persistent_workers: true
   deterministic_validation: true
-
 paths:
   processed_root: /root/EMS-Project/processed_dataset
   dino_root: /root/EMS-Project/stimulus_features/dino_vits16
-  cv_fold_dir: /root/EMS-Project/CV/5fold_seed2026/fold_0
+  cv_fold_dir: /root/EMS-Project/CV/5fold_seed2026/fold_1
   output_root: /root/EMS-Project/outputs/stage1
