@@ -1,7 +1,0 @@
-{
-  "cuda_available": false,
-  "numpy": "2.5.2",
-  "pandas": "3.0.5",
-  "python": "3.12.3",
-  "torch": "2.13.0+cu130"
-}
