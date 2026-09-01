@@ -154,8 +154,11 @@ normative_bank/
 
 ```bash
 # One fold
+python stage1_trainer.py --config configs/stage1/base.yaml --fold 1
 python stage1_trainer.py --config configs/stage1/base.yaml --fold 0
-
+python stage1_trainer.py --config configs/stage1/base.yaml --fold 2
+python stage1_trainer.py --config configs/stage1/base.yaml --fold 3
+python stage1_trainer.py --config configs/stage1/base.yaml --fold 4
 # All folds sequentially with isolated outputs
 python stage1_trainer.py --config configs/stage1/base.yaml --fold all
 
