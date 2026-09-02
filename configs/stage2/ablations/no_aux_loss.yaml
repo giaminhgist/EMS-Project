@@ -1,0 +1,4 @@
+# no_aux_loss: disable the additive-evidence auxiliary objective; the head is
+# retained for dimension parity but detached from training (guide 06 §6).
+loss:
+  lambda_aux: 0.0

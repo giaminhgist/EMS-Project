@@ -1,0 +1,4 @@
+# no_attention_entropy: disable the early anti-collapse attention entropy
+# regularization (guide 06 §6). Reference: base.
+loss:
+  lambda_entropy: 0.0

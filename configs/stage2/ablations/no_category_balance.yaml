@@ -1,0 +1,4 @@
+# no_category_balance: one masked softmax over all stimuli instead of
+# per-category normalization (guide 06 §6). Reference: base.
+model:
+  category_balanced_attention: false

@@ -1,0 +1,8 @@
+# no_spatial_bridge: identity spatial bridge instead of the residual
+# depthwise-convolution bridge; child ablation of token_bank_serial_attention
+# (guide 06 §6).
+model:
+  bank_mode: trial_and_fused_token
+  token_spatial_bridge: identity
+bank:
+  require_fused_token_bank: true

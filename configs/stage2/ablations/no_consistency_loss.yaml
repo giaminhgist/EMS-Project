@@ -1,0 +1,6 @@
+# no_consistency_loss: disable the subset-consistency objective and the second
+# subset view (guide 06 §6). Reference: base.
+loss:
+  lambda_cons: 0.0
+subsets:
+  enabled: false

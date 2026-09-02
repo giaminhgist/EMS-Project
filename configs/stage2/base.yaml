@@ -1,0 +1,86 @@
+# Stage-2 base configuration (Phases 2-4).
+# Values are the contract §20 design defaults, not claimed optima.
+# Named ablation overlays live in configs/stage2/ablations/.
+
+experiment_name: hc_normative_stage2
+ablation: base
+seed: 2026
+fold: 0
+evaluation_regime: pilot_existing_stage1
+
+bank:
+  root: /root/EMS-Project/normative_bank
+  train_mode: crossfit
+  verify_checksums: true
+  checkpoint_registry: /root/EMS-Project/configs/stage2/stage1_checkpoints.yaml
+  require_fused_token_bank: false
+  require_heatmap_token_bank: false
+
+sampler:
+  subject_batch_size: 4
+  balance_groups: true
+  drop_last: false
+
+runtime:
+  num_workers: 0
+  pin_memory: true
+  persistent_workers: false
+
+model:
+  d_model: 128
+  encoder_source: stage1_heatmap_encoder
+  freeze_encoder: true
+  query_pooling: attention
+  relation_hidden: 256
+  bank_mode: trial
+  attention_heads: 4
+  token_local_window: 3
+  token_attention_layers: 2
+  token_spatial_bridge: residual_dwconv_ffn
+  category_balanced_attention: true
+  subject_transformer_layers: 1
+  subject_transformer_ffn: 256
+  dropout: 0.25
+  auxiliary_evidence_head: true
+
+loss:
+  lambda_aux: 0.3
+  lambda_match: 0.1
+  lambda_cons: 0.1
+  lambda_entropy: 0.01
+  entropy_anneal_epochs: 10
+  lambda_anchor: 0.0
+  match_margin: 0.2
+  bank_rank_margin: 0.2
+  token_match_margin: 0.2
+  entropy_floor: 0.5
+
+subsets:
+  enabled: true
+  min_fraction: 0.5
+  max_fraction: 0.8
+  category_stratified: true
+
+optimization:
+  alignment_epochs: 10
+  classification_epochs: 50
+  optimizer: adamw
+  learning_rate: 1.0e-4
+  encoder_learning_rate: 1.0e-5
+  weight_decay: 5.0e-4
+  scheduler: linear_warmup_cosine
+  warmup_epochs: 5
+  gradient_clip_norm: 1.0
+  amp: true
+
+validation:
+  selection_metric: val_balanced_accuracy
+  secondary_metric: val_auroc
+  early_stopping_patience: 10
+  calibrate: true
+
+paths:
+  processed_root: /root/EMS-Project/processed_dataset
+  cv_root: /root/EMS-Project/CV/5fold_seed2026
+  normative_bank_root: /root/EMS-Project/normative_bank
+  output_root: /root/EMS-Project/outputs/stage2

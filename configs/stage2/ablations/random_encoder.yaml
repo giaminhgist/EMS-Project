@@ -1,0 +1,4 @@
+# random_encoder: exact Stage-1 architecture with seeded random weights,
+# frozen; transfer negative control (guide 06 §6, §7.4). Reference: base.
+model:
+  encoder_random_init: true

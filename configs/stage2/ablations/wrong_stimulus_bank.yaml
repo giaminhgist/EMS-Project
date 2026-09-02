@@ -1,0 +1,4 @@
+# wrong_stimulus_bank: one fixed category-preserving derangement of bank
+# indices, identical for every subject (guide 06 §6, §7.2). Reference: base.
+model:
+  wrong_bank_permutation: true
