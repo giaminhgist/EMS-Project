@@ -1,0 +1,22 @@
+# Stage-2 checkpoint registry (Phase 1).
+# Exactly one approved Stage-1 checkpoint per fold; the loader verifies the
+# recorded SHA-256 before any inference. Approved in Phase 0 (Decision A1:
+# pilot_existing_stage1 - outer-fold Stage-2 results are exploratory).
+schema_version: 1
+evaluation_regime: pilot_existing_stage1
+folds:
+  0:
+    checkpoint: /root/EMS-Project/outputs/stage1/dino_hc_normative_stage1_base_20260901_183252_934089_1/fold_0/checkpoints/best_stage1_fold0.pt
+    sha256: ee5469a2e08522d3b8962d81cf50b390b35597fc9f026dfa1c9ce8d3adbd6111
+  1:
+    checkpoint: /root/EMS-Project/outputs/stage1/dino_hc_normative_stage1_base_20260901_174330_403148_1/fold_1/checkpoints/best_stage1_fold1.pt
+    sha256: da9beef7b0ecb8f9e7337db7b6467e30a9b2b9c3279989b6b5925fad5c39f179
+  2:
+    checkpoint: /root/EMS-Project/outputs/stage1/dino_hc_normative_stage1_base_20260901_192309_089523_1/fold_2/checkpoints/best_stage1_fold2.pt
+    sha256: 44b4e9d610d7b4345c3811cce014493bd3d1a7ea2965ddd8cd95c12d12184fc2
+  3:
+    checkpoint: /root/EMS-Project/outputs/stage1/dino_hc_normative_stage1_base_20260901_201244_963927_1/fold_3/checkpoints/best_stage1_fold3.pt
+    sha256: e94486fa257c079bcd0da926ae6c874c295586db6dd6be8c5d7247c6291c0c97
+  4:
+    checkpoint: /root/EMS-Project/outputs/stage1/dino_hc_normative_stage1_base_20260901_210117_961793_1/fold_4/checkpoints/best_stage1_fold4.pt
+    sha256: f23d70af06fb72ee8e6acdc983a612f8b50791ea6a4aaeb7c69ea0b0715c5eaa

@@ -1,0 +1,6 @@
+# unfreeze_last_block: final heatmap residual block trainable at 0.1x LR with
+# the encoder anchor loss (guide 06 §6, §7.5). Reference: base.
+model:
+  encoder_unfreeze_last_block: true
+loss:
+  lambda_anchor: 0.5

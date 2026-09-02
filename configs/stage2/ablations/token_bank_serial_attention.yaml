@@ -1,0 +1,6 @@
+# token_bank_serial_attention: enable the fused-token serial cross-attention
+# branch; requires fused token banks (guide 06 §6). Reference: base.
+model:
+  bank_mode: trial_and_fused_token
+bank:
+  require_fused_token_bank: true

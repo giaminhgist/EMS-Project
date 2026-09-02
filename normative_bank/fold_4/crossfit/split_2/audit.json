@@ -1,0 +1,208 @@
+{
+  "checked_at_utc": "2026-09-01T22:50:34.149255+00:00",
+  "checks": {
+    "all_stimuli_covered": true,
+    "arrays_finite": true,
+    "complete": true,
+    "crossfit_exclusion_expected": true,
+    "crossfit_self_exclusion_ok": true,
+    "n_trials": 4792,
+    "no_forbidden_contributors": true,
+    "sigma_at_least_epsilon": true
+  },
+  "metadata": {
+    "array_sha256": {
+      "count_trial": "fe7641e657f9ed85b382a21e368ca0d6e46c7300f6c279ca25fedde8f81b714c",
+      "mu_token": "7d0ac315a290ae332dae3d3fb6b09eb92fa2752e85eba246f775f0e616bf8912",
+      "mu_trial": "a9e9810fee02ec041c22cbabf8bfbbd6d1f96bd2e6e53631b976e68609bfe420",
+      "sigma_token": "f1f64ec27c09c7e482d2fbb693175754810f131f29443434116e1fd525ed8d98",
+      "sigma_trial": "972f6dbf76c958e2e1c695105896a6bbcf634883e73c2598da49f0003879ed76"
+    },
+    "array_shapes": {
+      "count_trial": [
+        100
+      ],
+      "mu_token": [
+        100,
+        192,
+        128
+      ],
+      "mu_trial": [
+        100,
+        128
+      ],
+      "sigma_token": [
+        100,
+        192,
+        128
+      ],
+      "sigma_trial": [
+        100,
+        128
+      ]
+    },
+    "contributing_hc_subject_ids": [
+      "002",
+      "003",
+      "004",
+      "006",
+      "007",
+      "008",
+      "012",
+      "013",
+      "017",
+      "020",
+      "021",
+      "024",
+      "025",
+      "026",
+      "031",
+      "033",
+      "034",
+      "037",
+      "039",
+      "040",
+      "042",
+      "043",
+      "044",
+      "049",
+      "053",
+      "054",
+      "056",
+      "057",
+      "060",
+      "063",
+      "066",
+      "068",
+      "069",
+      "071",
+      "072",
+      "077",
+      "080",
+      "081",
+      "082",
+      "085",
+      "086",
+      "087",
+      "091",
+      "094",
+      "095",
+      "099",
+      "101",
+      "102"
+    ],
+    "created_at_utc": "2026-09-01T22:50:34.074129+00:00",
+    "crossfit_excluded_hc_subject_ids": [
+      "000",
+      "005",
+      "011",
+      "023",
+      "028",
+      "029",
+      "035",
+      "041",
+      "045",
+      "055",
+      "062",
+      "070",
+      "079",
+      "083",
+      "088",
+      "097"
+    ],
+    "crossfit_split": 2,
+    "cv_partition_sha256": {
+      "train_trials": "a3cc1ab4d0e46bd2e621af88ede5e41d500b734d5f93aa44520e8f31ff5e24e3",
+      "val_trials": "a5ccb1f0ae1ee89c4c8131212269b9fbe0749e13e8b7f2f617bba25b48750a15"
+    },
+    "dino_feature_sha256": "de75e0734f01c05b3124b34676653820332e64a4cf4612e5c9187dd6dd6a70da",
+    "epsilon": 1e-06,
+    "estimator": "mean",
+    "evaluation_regime": "pilot_existing_stage1",
+    "fold": 4,
+    "forbidden_validation_subject_ids": [
+      "001",
+      "009",
+      "016",
+      "019",
+      "022",
+      "032",
+      "036",
+      "046",
+      "050",
+      "059",
+      "064",
+      "065",
+      "073",
+      "084",
+      "089",
+      "090",
+      "204",
+      "205",
+      "214",
+      "241",
+      "246",
+      "247",
+      "250",
+      "258",
+      "261",
+      "268",
+      "269",
+      "273",
+      "275",
+      "285",
+      "293",
+      "299"
+    ],
+    "include_fused_token_bank": true,
+    "include_heatmap_token_bank": false,
+    "min_samples": 2,
+    "n_contributing_subjects": 48,
+    "n_trials": 4792,
+    "processed_manifest_sha256": "eb9c46552f156521c2ae021718cfeb496bf9f74c6af5e28f0986d1b2bb88ad04",
+    "schema_version": "1",
+    "seed": 2026,
+    "source_checksums": {
+      "cv_metadata_sha256": "181eec1ea5b2afc4aef221ba9373024af5f20ad695e813dccc28aa9e7b381740",
+      "dino_patch_tokens_sha256": "6a67ca60557b8f699132b6e1f281011a69e6e8dce09da12b3d0575d8d0455533",
+      "processed_dataset_metadata_sha256": "eb9c46552f156521c2ae021718cfeb496bf9f74c6af5e28f0986d1b2bb88ad04",
+      "processed_subject_manifest_sha256": "6470b5ddc83eb571cdd3d565c4d5ad87785a4b6b1ce796e170adca5d2b2fe078",
+      "processed_trial_manifest_sha256": "c717ad338296dc855c5791c0a75cf050747ee0b48d9a09a43d32404e89a31c6b"
+    },
+    "stage1_checkpoint_path": "/root/EMS-Project/outputs/stage1/dino_hc_normative_stage1_base_20260901_210117_961793_1/fold_4/checkpoints/best_stage1_fold4.pt",
+    "stage1_checkpoint_sha256": "f23d70af06fb72ee8e6acdc983a612f8b50791ea6a4aaeb7c69ea0b0715c5eaa",
+    "stage1_config_hash": "209b856152d4b3810c1f6f3bda894367a56a2d1e8005ca68eb3b9a2be343890f",
+    "stage1_run_id": "dino_hc_normative_stage1_base_20260901_210117_961793_1",
+    "stimulus_manifest_sha256": "187ac0e980a0b6525bebc93d9e9eeeddba8acb35aaf2e883767036eaa1c58dbc"
+  },
+  "sha256": {
+    "count_trial": "fe7641e657f9ed85b382a21e368ca0d6e46c7300f6c279ca25fedde8f81b714c",
+    "mu_token": "7d0ac315a290ae332dae3d3fb6b09eb92fa2752e85eba246f775f0e616bf8912",
+    "mu_trial": "a9e9810fee02ec041c22cbabf8bfbbd6d1f96bd2e6e53631b976e68609bfe420",
+    "sigma_token": "f1f64ec27c09c7e482d2fbb693175754810f131f29443434116e1fd525ed8d98",
+    "sigma_trial": "972f6dbf76c958e2e1c695105896a6bbcf634883e73c2598da49f0003879ed76"
+  },
+  "shapes": {
+    "count_trial": [
+      100
+    ],
+    "mu_token": [
+      100,
+      192,
+      128
+    ],
+    "mu_trial": [
+      100,
+      128
+    ],
+    "sigma_token": [
+      100,
+      192,
+      128
+    ],
+    "sigma_trial": [
+      100,
+      128
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+# no_match_loss: disable the explicit query/bank alignment objective and skip
+# the alignment warm-up (guide 06 §6). Reference: base.
+loss:
+  lambda_match: 0.0
+optimization:
+  alignment_epochs: 0

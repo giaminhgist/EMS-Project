@@ -1,0 +1,4 @@
+# mean_subject_pooling: category-balanced weighted mean instead of the subject
+# Transformer (guide 06 §6). Reference: base.
+model:
+  subject_transformer_layers: 0

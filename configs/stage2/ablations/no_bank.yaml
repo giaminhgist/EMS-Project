@@ -1,0 +1,4 @@
+# no_bank: neutralize every bank-derived relation feature while preserving
+# relation width (guide 06 §6, §7.1). Reference: base.
+model:
+  bank_features_active: false

@@ -1,0 +1,7 @@
+# single_token_attention: one serial token attention layer instead of two;
+# child ablation of token_bank_serial_attention (guide 06 §6).
+model:
+  bank_mode: trial_and_fused_token
+  token_attention_layers: 1
+bank:
+  require_fused_token_bank: true

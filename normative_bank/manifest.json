@@ -1,0 +1,1068 @@
+{
+  "bank_config": {
+    "batch_size": 64,
+    "crossfit_enabled": true,
+    "crossfit_splits": 4,
+    "cv_root": "/root/EMS-Project/CV/5fold_seed2026",
+    "device": "cpu",
+    "dino_root": "/root/EMS-Project/stimulus_features/dino_vits16",
+    "epsilon": 1e-06,
+    "estimator": "mean",
+    "include_fused_token_bank": true,
+    "include_heatmap_token_bank": false,
+    "min_samples": 2,
+    "output_root": "/root/EMS-Project/normative_bank",
+    "processed_root": "/root/EMS-Project/processed_dataset",
+    "seed": 2026
+  },
+  "created_at_utc": "2026-09-01T22:50:34.224082+00:00",
+  "evaluation_regime": "pilot_existing_stage1",
+  "folds": {
+    "0": {
+      "arrays": {
+        "count_trial": {
+          "sha256": "1985c44a33c4fe480245edc4bbebc59d421c8eec8ca4894f9bfd70ebc6d37d63",
+          "shape": [
+            100
+          ]
+        },
+        "mu_token": {
+          "sha256": "6bde82f5d02828faf1e48c746c69557bb61e0a4879a5a7af766f332091466291",
+          "shape": [
+            100,
+            192,
+            128
+          ]
+        },
+        "mu_trial": {
+          "sha256": "86d7dd8a05faab88f66664f12eefd07e999067f880f47318d6cd49b2cadafc66",
+          "shape": [
+            100,
+            128
+          ]
+        },
+        "sigma_token": {
+          "sha256": "3dacbca8a1584b30818e849d268f4c6ed269f3477a2e63f3c37127b5822387cc",
+          "shape": [
+            100,
+            192,
+            128
+          ]
+        },
+        "sigma_trial": {
+          "sha256": "f60b90ba209a42e5e51abff3ab08cab16d687361dc0eaea287dd882437610d88",
+          "shape": [
+            100,
+            128
+          ]
+        }
+      },
+      "crossfit": {
+        "split_0": {
+          "arrays": {
+            "count_trial": {
+              "sha256": "02debe74c6e01da88606323826d7def3c4512b3bfa1e535f7eac7fbe87984da6",
+              "shape": [
+                100
+              ]
+            },
+            "mu_token": {
+              "sha256": "ae75a5ec4327a507c7fca54a67c18249c12cb776b309213f17d7debee71b559b",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "mu_trial": {
+              "sha256": "4b9c5dae65142de62ea8b381d93e3def86942b6dca48ffc5038ac548f71768b0",
+              "shape": [
+                100,
+                128
+              ]
+            },
+            "sigma_token": {
+              "sha256": "5a797db2d17633a8cf02ff44d1e959128faed01add8de6164da06a23bfa8dc50",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "sigma_trial": {
+              "sha256": "5147fe578441606bbf11995c8e8edd69a3d1af5f464cd23e45ac57adef5ebcee",
+              "shape": [
+                100,
+                128
+              ]
+            }
+          }
+        },
+        "split_1": {
+          "arrays": {
+            "count_trial": {
+              "sha256": "ef25351634c61e324a489169ba2e7245e7e26c4514bf4195d36bf3b2f3e876ad",
+              "shape": [
+                100
+              ]
+            },
+            "mu_token": {
+              "sha256": "6b5e02adc3c6871e59ba79c1b762c5506039fe563160e52f65fe459e68bdabcf",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "mu_trial": {
+              "sha256": "914577bbb56c3f75acd3de5c5bd772a6c364b7ebf8efa3c7b815ae9fb1615226",
+              "shape": [
+                100,
+                128
+              ]
+            },
+            "sigma_token": {
+              "sha256": "35e2e748b226b487f2ab764845eab0baee4f346a0b21255fbf455d93520f6bd5",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "sigma_trial": {
+              "sha256": "e5f981a21b7b4a6d9e715659c316d768b24d18984d0d5315ef9a97ab7811123c",
+              "shape": [
+                100,
+                128
+              ]
+            }
+          }
+        },
+        "split_2": {
+          "arrays": {
+            "count_trial": {
+              "sha256": "7e25dabf18287be7b5bb785ed2673da5c7d2a496e1aa9c2dd6fac700d1dd4652",
+              "shape": [
+                100
+              ]
+            },
+            "mu_token": {
+              "sha256": "e077a9d63ebc9452e2f36fd5f90bfb4bbfe8763891ee9212aca596ecb7878e2f",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "mu_trial": {
+              "sha256": "b59da9d02779b223080adab1a9881bc60849c432d99734903b8916d351e0487b",
+              "shape": [
+                100,
+                128
+              ]
+            },
+            "sigma_token": {
+              "sha256": "b30afa32fda1f3b1621fd615fc6937348af3b50d636f385de5f2c86b3426dded",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "sigma_trial": {
+              "sha256": "2eb825cffe8acf3a4def0b9f313799375bfd45924ff49d1bd6844b1ac7515c6f",
+              "shape": [
+                100,
+                128
+              ]
+            }
+          }
+        },
+        "split_3": {
+          "arrays": {
+            "count_trial": {
+              "sha256": "d0af04650d92aec3a0b4bc9d1a5a7020004ef507b4d209d0ce60dc35638859a4",
+              "shape": [
+                100
+              ]
+            },
+            "mu_token": {
+              "sha256": "33865fd420127f317267329ccd4d800024bb67b53583489ca41bf7d4ce4dc4b2",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "mu_trial": {
+              "sha256": "d4dbebd88f454b67358ed85906a80e5f362d996bcffb87f01b9ccea4e2c5d00f",
+              "shape": [
+                100,
+                128
+              ]
+            },
+            "sigma_token": {
+              "sha256": "09cc0ccbd671cd754f2d9bd7378561205eeb4bf2e97b550f4bb17b506ebfe553",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "sigma_trial": {
+              "sha256": "50fba110c633a6f6fbbf22641ee7bed7ef8c1b500d3ba3bd0dc3831341d34a43",
+              "shape": [
+                100,
+                128
+              ]
+            }
+          }
+        }
+      },
+      "crossfit_splits": 4,
+      "n_contributing_hc_subjects": 64,
+      "n_trials": 6387,
+      "path": "fold_0",
+      "stage1_checkpoint": "/root/EMS-Project/outputs/stage1/dino_hc_normative_stage1_base_20260901_183252_934089_1/fold_0/checkpoints/best_stage1_fold0.pt",
+      "stage1_checkpoint_sha256": "ee5469a2e08522d3b8962d81cf50b390b35597fc9f026dfa1c9ce8d3adbd6111",
+      "status": "complete"
+    },
+    "1": {
+      "arrays": {
+        "count_trial": {
+          "sha256": "e4b54f03c49f9aebd62ba9d64e2aa8ed457f6bd854bb984a5dcc439ffef88b4a",
+          "shape": [
+            100
+          ]
+        },
+        "mu_token": {
+          "sha256": "6f0201b87aeabcab67ee120c988859cc8d56e01e1dd64c1d404745632d441662",
+          "shape": [
+            100,
+            192,
+            128
+          ]
+        },
+        "mu_trial": {
+          "sha256": "ec18a5cc943ee6869821a89dc2a6b60e10029118c662974208406679242931b7",
+          "shape": [
+            100,
+            128
+          ]
+        },
+        "sigma_token": {
+          "sha256": "7f5e433cf84250499439a928898a34620e136a47bd76ef4ff6ba59650ddd617f",
+          "shape": [
+            100,
+            192,
+            128
+          ]
+        },
+        "sigma_trial": {
+          "sha256": "09455806c6b22790bd960f45bf478794fcef4608f59d6d6b140448dd845f7a7c",
+          "shape": [
+            100,
+            128
+          ]
+        }
+      },
+      "crossfit": {
+        "split_0": {
+          "arrays": {
+            "count_trial": {
+              "sha256": "d4d93b44348456a6560dda62a7064ab009fb9606bd43d6aa5c49c488de3a26f0",
+              "shape": [
+                100
+              ]
+            },
+            "mu_token": {
+              "sha256": "a6776e3085b8a184577f408a23b1b85961ac016f8547ef9081249f81daef0c6f",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "mu_trial": {
+              "sha256": "b03bdcd991824236c88bff0b09d98324e339f51135478a49113a57d6a55bc4b2",
+              "shape": [
+                100,
+                128
+              ]
+            },
+            "sigma_token": {
+              "sha256": "0f12a016b325db888771a25de1b59d75080ce15ab2c79c2a73018cdd8896345f",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "sigma_trial": {
+              "sha256": "b419ac5a9a56ab966d44cd7f65c2d5ae179306706dd1ab18cda8c8673d535a4c",
+              "shape": [
+                100,
+                128
+              ]
+            }
+          }
+        },
+        "split_1": {
+          "arrays": {
+            "count_trial": {
+              "sha256": "fd2ed886ef42b8c81dd68e6a4dac58549df31d84c1d21e462696d14e8e3f83c1",
+              "shape": [
+                100
+              ]
+            },
+            "mu_token": {
+              "sha256": "9abcce587fe3d9464c6686b2103723eec1b3a98e9a5ac6f477fe97f228bc201e",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "mu_trial": {
+              "sha256": "020b13aafc4ec1c435f76db4d1c2b828d771ac01d186a907284aa9b088311226",
+              "shape": [
+                100,
+                128
+              ]
+            },
+            "sigma_token": {
+              "sha256": "99f1867242dde5c4a97c8ae98e5f8f14a8a020989a6d7671017897be12ec9ba4",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "sigma_trial": {
+              "sha256": "728ce51bf4bec27ae8c9a3b4ee4bc274b07784d9ce7483a0f40dfbfb6839b9d5",
+              "shape": [
+                100,
+                128
+              ]
+            }
+          }
+        },
+        "split_2": {
+          "arrays": {
+            "count_trial": {
+              "sha256": "0361c67f87be539a4916e6460067427af25d955515b97c581224193ba9d62706",
+              "shape": [
+                100
+              ]
+            },
+            "mu_token": {
+              "sha256": "b6a9c07b6abfc578bd6b7b70cb7455be2beb332f0953c5047705ac96bd3f9847",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "mu_trial": {
+              "sha256": "c0d52c6af52eb4f06e9f4aacc0f1b8fd6f31203d008d1129a93eb56ab0187128",
+              "shape": [
+                100,
+                128
+              ]
+            },
+            "sigma_token": {
+              "sha256": "43305f6244b672af0241f640a1fb9fbc07fe36ff8b0a12143d9a79636ea2885b",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "sigma_trial": {
+              "sha256": "6cbab4b5cad6dc28bd7894c682927715d5e5ba50d9ca554973ef3f5186c0d570",
+              "shape": [
+                100,
+                128
+              ]
+            }
+          }
+        },
+        "split_3": {
+          "arrays": {
+            "count_trial": {
+              "sha256": "288b5e750ebfebaea3d16cfd34af765f943622c526f59d97079e1d3e19fc4476",
+              "shape": [
+                100
+              ]
+            },
+            "mu_token": {
+              "sha256": "9b59c538fc42c0f4296ecdefbe9a2b66cf19acf2c6fb1e6f880a2c6fb407e905",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "mu_trial": {
+              "sha256": "afc5c34d248f198edde814466eeaf8cd76200ac805e4209a5600e711e832e5cd",
+              "shape": [
+                100,
+                128
+              ]
+            },
+            "sigma_token": {
+              "sha256": "7c41bf8d79565120369c36bfa2d73af7c1c77a03494b2d7fc4b261b7d1d227f2",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "sigma_trial": {
+              "sha256": "bb0b8c25d9793156913d08161c22174155af3419e34be276079530daf2499dd1",
+              "shape": [
+                100,
+                128
+              ]
+            }
+          }
+        }
+      },
+      "crossfit_splits": 4,
+      "n_contributing_hc_subjects": 64,
+      "n_trials": 6391,
+      "path": "fold_1",
+      "stage1_checkpoint": "/root/EMS-Project/outputs/stage1/dino_hc_normative_stage1_base_20260901_174330_403148_1/fold_1/checkpoints/best_stage1_fold1.pt",
+      "stage1_checkpoint_sha256": "da9beef7b0ecb8f9e7337db7b6467e30a9b2b9c3279989b6b5925fad5c39f179",
+      "status": "complete"
+    },
+    "2": {
+      "arrays": {
+        "count_trial": {
+          "sha256": "8a3b50b6236c7944164d1cd7a31d8ccf303ed1f6ce440f14ccf97b76b7866454",
+          "shape": [
+            100
+          ]
+        },
+        "mu_token": {
+          "sha256": "45b2db5bdac25bd36579d91f5e815d5a0d40b144555a8e78682eaf909ffdd2ab",
+          "shape": [
+            100,
+            192,
+            128
+          ]
+        },
+        "mu_trial": {
+          "sha256": "4d692277a71c6eae3a102267fb1b819dd74d0beebf5f6280b915053befd9bce8",
+          "shape": [
+            100,
+            128
+          ]
+        },
+        "sigma_token": {
+          "sha256": "bf9a3697503a6d83c33fde228030b388be9bfb910db0ea4a9b20ed1a6e8e99eb",
+          "shape": [
+            100,
+            192,
+            128
+          ]
+        },
+        "sigma_trial": {
+          "sha256": "1c36cc1c45620df7442f2cbca346f748ff3a05f6df6f75ae712efc048cf87667",
+          "shape": [
+            100,
+            128
+          ]
+        }
+      },
+      "crossfit": {
+        "split_0": {
+          "arrays": {
+            "count_trial": {
+              "sha256": "9944020af32a1f856f78c9ffb27dd2d6a238a6192a543d8d5a4c8785cb9992a3",
+              "shape": [
+                100
+              ]
+            },
+            "mu_token": {
+              "sha256": "534c7b06ac98917f8daff980bd2b1d5ff85fb457549d2a229894efe48b945887",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "mu_trial": {
+              "sha256": "ef4132418743c2df549f7f6f89ed68d4934e8f0f4e4446197fc1b2dac0bb4217",
+              "shape": [
+                100,
+                128
+              ]
+            },
+            "sigma_token": {
+              "sha256": "5dc16d448d40e1fe8a70ad253670492b349387a4718dc5b27b783b7853d12be0",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "sigma_trial": {
+              "sha256": "eda855e70a22cde5ee977f915e232da12371cc65fc39e6db7f285b85dcc8b246",
+              "shape": [
+                100,
+                128
+              ]
+            }
+          }
+        },
+        "split_1": {
+          "arrays": {
+            "count_trial": {
+              "sha256": "787f2bae8f256ef4f791145d80218d2d2bbf2407f96e74df48f09bfea68357aa",
+              "shape": [
+                100
+              ]
+            },
+            "mu_token": {
+              "sha256": "775a97c65bd4158839fbe16bb781950fc776a8fe154c2d6b61d16854d4780917",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "mu_trial": {
+              "sha256": "83535cae1841f1f02cbac212524ea17d6f43c1b86b7b81b7cd40bab16e15a95c",
+              "shape": [
+                100,
+                128
+              ]
+            },
+            "sigma_token": {
+              "sha256": "83cf0315ef4d022d18bef9f2470945c886cdb5ef850c407239898143521fff82",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "sigma_trial": {
+              "sha256": "43e52e82db6336f1b13a0d34d5b2dfcbe2d8d03aa5b511c12903589a1d1bcc03",
+              "shape": [
+                100,
+                128
+              ]
+            }
+          }
+        },
+        "split_2": {
+          "arrays": {
+            "count_trial": {
+              "sha256": "06763e6711ea9c52ab44876a717d5a8663da03df15a99f7c339ed07e83253a9d",
+              "shape": [
+                100
+              ]
+            },
+            "mu_token": {
+              "sha256": "751d91ff979ca599179122a718415366f48564feb61f1d45bd6d9630ed57e719",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "mu_trial": {
+              "sha256": "4ccf6889ed9fa6757a383ded53253e4d74155969a659501d250d0c9a560c6ab8",
+              "shape": [
+                100,
+                128
+              ]
+            },
+            "sigma_token": {
+              "sha256": "69cc59543c0eca3dcf4934f7a307acbe915c8b63e06dffa742a1f4e56ce2853e",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "sigma_trial": {
+              "sha256": "e59ee328d4df82953e5d61416291d99a389baaec1338f19564f26fb3181f6fd0",
+              "shape": [
+                100,
+                128
+              ]
+            }
+          }
+        },
+        "split_3": {
+          "arrays": {
+            "count_trial": {
+              "sha256": "a492b44072c35137ae2c7fff7281d4b3f60eb6c79dedd21b54f5a62160a92905",
+              "shape": [
+                100
+              ]
+            },
+            "mu_token": {
+              "sha256": "9028c24386be56a28a018cbc8b6057871a58c4103cb6526424469e1f7f73c6e3",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "mu_trial": {
+              "sha256": "c4adc2285d33b63afc9ecff43298ae46b35a2137e581a6c643d7133cc5719fb9",
+              "shape": [
+                100,
+                128
+              ]
+            },
+            "sigma_token": {
+              "sha256": "73c14bf74b0fa588137e4eb35989244639ffa03a02675219d40664513ce381a0",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "sigma_trial": {
+              "sha256": "f889b156a13e84f3c5c8fd6ae19bd6e2fbdeeaba11871fd53fd715105b447902",
+              "shape": [
+                100,
+                128
+              ]
+            }
+          }
+        }
+      },
+      "crossfit_splits": 4,
+      "n_contributing_hc_subjects": 64,
+      "n_trials": 6389,
+      "path": "fold_2",
+      "stage1_checkpoint": "/root/EMS-Project/outputs/stage1/dino_hc_normative_stage1_base_20260901_192309_089523_1/fold_2/checkpoints/best_stage1_fold2.pt",
+      "stage1_checkpoint_sha256": "44b4e9d610d7b4345c3811cce014493bd3d1a7ea2965ddd8cd95c12d12184fc2",
+      "status": "complete"
+    },
+    "3": {
+      "arrays": {
+        "count_trial": {
+          "sha256": "1888d06aa307854e7e4d8283de1331feb207e8ce454a3fbea5338b43b87436ca",
+          "shape": [
+            100
+          ]
+        },
+        "mu_token": {
+          "sha256": "6969e0d12e97bc928a4889b152ee6123b5122bd93ca3e85c7fd2eddb264540d4",
+          "shape": [
+            100,
+            192,
+            128
+          ]
+        },
+        "mu_trial": {
+          "sha256": "5e61e28c83fc1e6515d5dd69a003ceb51388cd3d400896579de60cc7b35b8f85",
+          "shape": [
+            100,
+            128
+          ]
+        },
+        "sigma_token": {
+          "sha256": "18a384f1876bf3b89e72a31089dca35e1a959411bca4482c988ab9b92f77826d",
+          "shape": [
+            100,
+            192,
+            128
+          ]
+        },
+        "sigma_trial": {
+          "sha256": "5ae2584bddd9725870a3e5048ba9a1c42d4747faecb54ac945005f0ec78f97dd",
+          "shape": [
+            100,
+            128
+          ]
+        }
+      },
+      "crossfit": {
+        "split_0": {
+          "arrays": {
+            "count_trial": {
+              "sha256": "d4d93b44348456a6560dda62a7064ab009fb9606bd43d6aa5c49c488de3a26f0",
+              "shape": [
+                100
+              ]
+            },
+            "mu_token": {
+              "sha256": "5c2df00c11faa4f97d5524e0118922743089086e383ab676a7767cdf142a0d66",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "mu_trial": {
+              "sha256": "8d2cd32aff12e08ee86bbff626313813789fd4fee6d24e68388fa8034bdaba64",
+              "shape": [
+                100,
+                128
+              ]
+            },
+            "sigma_token": {
+              "sha256": "3cd2aa68e50125c1581140a68413d2dc6cba4ad3bf0f08122da87c1e6208eb02",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "sigma_trial": {
+              "sha256": "83345ef58a1f80d1421c046723a3f90cfc4e6c8c096e62f62f33864b0cd47fd7",
+              "shape": [
+                100,
+                128
+              ]
+            }
+          }
+        },
+        "split_1": {
+          "arrays": {
+            "count_trial": {
+              "sha256": "633ab7d6d11ae8c6340099f99ec0de424a38196355e9c9ab1c25ad6fc2a13f11",
+              "shape": [
+                100
+              ]
+            },
+            "mu_token": {
+              "sha256": "1890981df00fedadc4540988ebcf3b8a64ea7714c8e03faea9102fea773ff963",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "mu_trial": {
+              "sha256": "4bcfdfee6bffa87d89aaa87f11a73e5405f732183b558feabee428079ad5d5ec",
+              "shape": [
+                100,
+                128
+              ]
+            },
+            "sigma_token": {
+              "sha256": "c186cce45c81c69f8e173b73cc2f0de761399bdb89eb2164f80b35c4e53cd1ef",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "sigma_trial": {
+              "sha256": "d8ef2945815ac42ce00d7598f9007a50d71c7011519e39e3c74389fb142a105b",
+              "shape": [
+                100,
+                128
+              ]
+            }
+          }
+        },
+        "split_2": {
+          "arrays": {
+            "count_trial": {
+              "sha256": "dc7562e65578b76cb2cc89fe15d33271be56027308c53b8dd87713985b522036",
+              "shape": [
+                100
+              ]
+            },
+            "mu_token": {
+              "sha256": "7b3a5fcebea5c5779dd7bdc49811e25d93bd9f33c67ec76901d8a50115c1d138",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "mu_trial": {
+              "sha256": "92e68b15f8eaf677e3e96249f651e648b1dfc4d4680369786bf8da2bcfcb015e",
+              "shape": [
+                100,
+                128
+              ]
+            },
+            "sigma_token": {
+              "sha256": "c7945648bc55e4d6537a1788326dbb27f64031b4d630deb53315de14fdd65497",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "sigma_trial": {
+              "sha256": "e84d867f599dd70d071e834e1e24f46f105b1b54e44415301cd1b65b28d2128c",
+              "shape": [
+                100,
+                128
+              ]
+            }
+          }
+        },
+        "split_3": {
+          "arrays": {
+            "count_trial": {
+              "sha256": "44b3c35106191aff50a174d080d8a204f5a99619cdd4970b0ad26c0cd82e6f8a",
+              "shape": [
+                100
+              ]
+            },
+            "mu_token": {
+              "sha256": "2859888b1de01e0b1369e3f807fb98fe5ec7646842b9b689b968c7ebb0837b58",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "mu_trial": {
+              "sha256": "74c4bb6d10053ad9f74521c74e8e97980dfde936127da98b015035940c8dc475",
+              "shape": [
+                100,
+                128
+              ]
+            },
+            "sigma_token": {
+              "sha256": "49aa4dcedfac13e31eec32b340307dce7a98fb62525c76464f995fc194f1c8db",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "sigma_trial": {
+              "sha256": "741bd39a21bfa7a0696553f4af9ff54f5c5104545a03808bdb548795574f7c39",
+              "shape": [
+                100,
+                128
+              ]
+            }
+          }
+        }
+      },
+      "crossfit_splits": 4,
+      "n_contributing_hc_subjects": 64,
+      "n_trials": 6386,
+      "path": "fold_3",
+      "stage1_checkpoint": "/root/EMS-Project/outputs/stage1/dino_hc_normative_stage1_base_20260901_201244_963927_1/fold_3/checkpoints/best_stage1_fold3.pt",
+      "stage1_checkpoint_sha256": "e94486fa257c079bcd0da926ae6c874c295586db6dd6be8c5d7247c6291c0c97",
+      "status": "complete"
+    },
+    "4": {
+      "arrays": {
+        "count_trial": {
+          "sha256": "525342cbb8613d2650fd88839f7e6105ec176533d0463a865d3127dc50897d47",
+          "shape": [
+            100
+          ]
+        },
+        "mu_token": {
+          "sha256": "9727fcc3b49d5b48f3eb0399804be0c799f032d00afe98fc3ceea09bb2710e20",
+          "shape": [
+            100,
+            192,
+            128
+          ]
+        },
+        "mu_trial": {
+          "sha256": "a550fd5f232c8118c24669ca6b1df85c91d8c973ae3361017732b0a7332d850f",
+          "shape": [
+            100,
+            128
+          ]
+        },
+        "sigma_token": {
+          "sha256": "2c36b97f681c07ea16424dfeef924ef1e627d7425aba1cbad346b041f3ecff40",
+          "shape": [
+            100,
+            192,
+            128
+          ]
+        },
+        "sigma_trial": {
+          "sha256": "4ba4514d4d0cacdc1b1e350723a7658710894868f59fa3fd1abd16dff50dcf63",
+          "shape": [
+            100,
+            128
+          ]
+        }
+      },
+      "crossfit": {
+        "split_0": {
+          "arrays": {
+            "count_trial": {
+              "sha256": "94565548e58a3182c66468bfd85ad1fba9a01bb0a30bf5a4ccb253eafdd587f7",
+              "shape": [
+                100
+              ]
+            },
+            "mu_token": {
+              "sha256": "70af7656c60c9a701796fed5ce0f7d397ef8316410e735ed486d9ba31eba32f2",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "mu_trial": {
+              "sha256": "7cbf7d741a39f5883e6b282575254ac63594bdd368ca272ae2c4cbb262a1d072",
+              "shape": [
+                100,
+                128
+              ]
+            },
+            "sigma_token": {
+              "sha256": "a5b002a1162a8376cf7cb3319056940e49487a9eb852661f1a68ad420d6b91b2",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "sigma_trial": {
+              "sha256": "1e0c7a74ab14b3544ab07abefd526014fe6edae96f9c87885fd57c284c7a37e7",
+              "shape": [
+                100,
+                128
+              ]
+            }
+          }
+        },
+        "split_1": {
+          "arrays": {
+            "count_trial": {
+              "sha256": "288b5e750ebfebaea3d16cfd34af765f943622c526f59d97079e1d3e19fc4476",
+              "shape": [
+                100
+              ]
+            },
+            "mu_token": {
+              "sha256": "30e280fb20a4ff9886398dbed4d3ec5a777e7dc08e29dec2e438216448b3b288",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "mu_trial": {
+              "sha256": "d3fd33183e4f4632cf133dc6ebdd4d7346708d974521cfd382265429faad25a0",
+              "shape": [
+                100,
+                128
+              ]
+            },
+            "sigma_token": {
+              "sha256": "902f4da1ee7200e4ba1edfa57e920323047fdee4927034c4a5e540e7d3e7b0d9",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "sigma_trial": {
+              "sha256": "b11096f0387df6f331db4e9210150a0565ba92530c70c2e441370734b7fca484",
+              "shape": [
+                100,
+                128
+              ]
+            }
+          }
+        },
+        "split_2": {
+          "arrays": {
+            "count_trial": {
+              "sha256": "fe7641e657f9ed85b382a21e368ca0d6e46c7300f6c279ca25fedde8f81b714c",
+              "shape": [
+                100
+              ]
+            },
+            "mu_token": {
+              "sha256": "7d0ac315a290ae332dae3d3fb6b09eb92fa2752e85eba246f775f0e616bf8912",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "mu_trial": {
+              "sha256": "a9e9810fee02ec041c22cbabf8bfbbd6d1f96bd2e6e53631b976e68609bfe420",
+              "shape": [
+                100,
+                128
+              ]
+            },
+            "sigma_token": {
+              "sha256": "f1f64ec27c09c7e482d2fbb693175754810f131f29443434116e1fd525ed8d98",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "sigma_trial": {
+              "sha256": "972f6dbf76c958e2e1c695105896a6bbcf634883e73c2598da49f0003879ed76",
+              "shape": [
+                100,
+                128
+              ]
+            }
+          }
+        },
+        "split_3": {
+          "arrays": {
+            "count_trial": {
+              "sha256": "8a923ee9e8609f1760243939ebc2e07d231af249077effe9845e4b7aa37e0bfa",
+              "shape": [
+                100
+              ]
+            },
+            "mu_token": {
+              "sha256": "4bf08939a805952d780cc140cd39af1177985813c98866681c65b479d2727822",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "mu_trial": {
+              "sha256": "851ea578965b5539d969136112d8b7ae2711bb90c928494dd4fbe287195ebd5b",
+              "shape": [
+                100,
+                128
+              ]
+            },
+            "sigma_token": {
+              "sha256": "1c9b420a12383863049113bed930dc7624f983fd807f26161d9d24c69ee8ecfe",
+              "shape": [
+                100,
+                192,
+                128
+              ]
+            },
+            "sigma_trial": {
+              "sha256": "75629303edd2f271af33dc80adacdf011749dfcddd94c6a8ccd15d922971ffb2",
+              "shape": [
+                100,
+                128
+              ]
+            }
+          }
+        }
+      },
+      "crossfit_splits": 4,
+      "n_contributing_hc_subjects": 64,
+      "n_trials": 6391,
+      "path": "fold_4",
+      "stage1_checkpoint": "/root/EMS-Project/outputs/stage1/dino_hc_normative_stage1_base_20260901_210117_961793_1/fold_4/checkpoints/best_stage1_fold4.pt",
+      "stage1_checkpoint_sha256": "f23d70af06fb72ee8e6acdc983a612f8b50791ea6a4aaeb7c69ea0b0715c5eaa",
+      "status": "complete"
+    }
+  },
+  "schema_version": "1"
+}

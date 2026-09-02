@@ -1,10 +1,8 @@
 # Stage-1 — HC-only semantic-conditioned normative encoder
 
-Generated from the implemented code and resolved configuration (do not edit by hand).
-
-```bash
-python generate_stage1_readme.py --config configs/stage1/base.yaml
-```
+Static artifact: generated once from the implemented code and resolved
+configuration; the generator script was removed by explicit user request, so
+update the affected sections manually after code/config changes.
 
 ## 1. Research objective and Stage-1-only scope
 

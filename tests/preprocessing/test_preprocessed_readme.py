@@ -1,9 +1,6 @@
-"""README rendering and --verify-only tests on the synthetic dataset."""
+"""README rendering tests on the synthetic dataset."""
 
 from __future__ import annotations
-
-import json
-from pathlib import Path
 
 import pytest
 
@@ -69,59 +66,3 @@ def test_rendering_is_deterministic(rendered):
     text1 = render_readme(rendered["summary"])
     text2 = render_readme(rendered["summary"])
     assert text1 == text2
-
-
-def test_verify_only_passes_on_fresh_output(rendered, synthetic_processed):
-    import sys
-
-    from generate_preprocessed_readme import verify
-
-    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-    assert verify(Path(synthetic_processed), rendered["out"]) == 0
-
-
-def test_verify_only_detects_modified_manifest(rendered, synthetic_processed):
-    import sys
-
-    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-    from generate_preprocessed_readme import verify
-
-    manifest = Path(synthetic_processed) / "subject_manifest.csv"
-    original = manifest.read_text(encoding="utf-8")
-    try:
-        manifest.write_text(original + "000,0,HC,0,000.xlsx,1,1,2,abc\n", encoding="utf-8")
-        assert verify(Path(synthetic_processed), rendered["out"]) == 1
-    finally:
-        manifest.write_text(original, encoding="utf-8")
-
-
-def test_verify_only_detects_modified_preprocessing_config(rendered, synthetic_processed):
-    import sys
-
-    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-    from generate_preprocessed_readme import verify
-
-    cfg_path = Path(synthetic_processed) / "preprocessing_config.json"
-    original = cfg_path.read_text(encoding="utf-8")
-    try:
-        cfg = json.loads(original)
-        cfg["gaussian_sigma_cells"] = 9.9
-        cfg_path.write_text(json.dumps(cfg), encoding="utf-8")
-        assert verify(Path(synthetic_processed), rendered["out"]) == 1
-    finally:
-        cfg_path.write_text(original, encoding="utf-8")
-
-
-def test_verify_only_detects_modified_readme(rendered, synthetic_processed):
-    import sys
-
-    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-    from generate_preprocessed_readme import verify
-
-    readme = rendered["readme_path"]
-    original = readme.read_text(encoding="utf-8")
-    try:
-        readme.write_text(original + "\n# tampered\n", encoding="utf-8")
-        assert verify(Path(synthetic_processed), rendered["out"]) == 1
-    finally:
-        readme.write_text(original, encoding="utf-8")

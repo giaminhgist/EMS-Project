@@ -1,0 +1,17 @@
+# Stage-2 normative bank configuration (Phase 1).
+# Values reflect the Phase-0 approved decisions:
+#   A1 pilot_existing_stage1 | B2 trial + fused-token bank | C1 four-way crossfit.
+seed: 2026
+estimator: mean
+epsilon: 1.0e-6
+min_samples: 2
+batch_size: 64
+include_fused_token_bank: true
+include_heatmap_token_bank: false
+crossfit_splits: 4
+crossfit_enabled: true
+device: cpu
+output_root: /root/EMS-Project/normative_bank
+processed_root: /root/EMS-Project/processed_dataset
+dino_root: /root/EMS-Project/stimulus_features/dino_vits16
+cv_root: /root/EMS-Project/CV/5fold_seed2026

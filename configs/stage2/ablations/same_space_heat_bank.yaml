@@ -1,0 +1,7 @@
+# same_space_heat_bank: direct same-encoder heatmap-token cosine/z deviation.
+# NOT RUNNABLE: heatmap-token banks were not built (Phase 0 approved trial +
+# fused-token banks only). Configuration validation rejects this overlay.
+model:
+  bank_mode: trial_and_fused_token
+bank:
+  require_heatmap_token_bank: true

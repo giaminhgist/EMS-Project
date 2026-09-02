@@ -1,0 +1,4 @@
+# global_bank: one count-weighted global training-HC bank vector repeated over
+# all 100 stimulus slots (guide 06 §6, §7.3). Reference: base.
+model:
+  global_bank: true

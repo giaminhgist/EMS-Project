@@ -1,0 +1,4 @@
+# mean_query_pooling: masked mean over patches instead of learned attention
+# pooling (guide 06 §6). Reference: base.
+model:
+  query_pooling: mean

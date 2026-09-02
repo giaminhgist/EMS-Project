@@ -1,10 +1,8 @@
 # EMS processed dataset — preprocessing, schema, and EDA
 
-Generated reproducibly from the canonical processed artifacts by:
-
-```bash
-generate_preprocessed_readme.py --processed-root /root/EMS-Project/processed_dataset --output-dir /root/EMS-Project/readme/preprocessed
-```
+Static artifact: generated once from the canonical processed artifacts; the
+generator script was removed by explicit user request, so update the affected
+sections manually after preprocessing changes.
 
 Python 3.12.3, NumPy 2.5.2, pandas 3.0.5.
 
